@@ -5,9 +5,9 @@ export const siteConfig = {
   domain: "https://www.i-wall.com",
   defaultLocale: "en",
   company: {
-    email: "hello@i-wall.com",
+    email: "info@iwall.com.tr",
     phone: "+90 212 000 00 00",
-    whatsapp: "+90 532 000 00 00",
+    whatsapp: "+90 505 296 74 73",
     address: "Istanbul, Türkiye",
     mapEmbedUrl: "",
     social: {
