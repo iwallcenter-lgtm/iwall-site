@@ -9,9 +9,9 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, description }: PageHeroProps) {
   return (
-    <section className="border-b border-black/5 bg-fog py-20 sm:py-24">
+    <section className="border-b border-white/10 bg-green-luxury py-20 sm:py-24">
       <Container>
-        <SectionHeading eyebrow={eyebrow} title={title} description={description} />
+        <SectionHeading eyebrow={eyebrow} title={title} description={description} tone="light" />
       </Container>
     </section>
   );

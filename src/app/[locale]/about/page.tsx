@@ -26,11 +26,11 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   return (
     <>
       <PageHero title={messages.about.heroTitle} description={messages.about.heroText} />
-      <section className="py-20">
+      <section className="bg-white py-24">
         <Container className="grid gap-6 lg:grid-cols-2">
           {sections.map((section) => (
-            <div key={section.title} className="rounded-[1.75rem] border border-black/10 bg-white p-7 shadow-sm">
-              <h2 className="text-2xl font-semibold text-ink">{section.title}</h2>
+            <div key={section.title} className="rounded-[1.9rem] border border-pine/10 bg-white p-7 shadow-panel">
+              <h2 className="text-2xl font-semibold tracking-[0.02em] text-pine-deep">{section.title}</h2>
               <p className="mt-4 text-sm leading-7 text-neutral-600">{section.text}</p>
             </div>
           ))}

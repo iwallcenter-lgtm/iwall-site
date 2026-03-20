@@ -24,12 +24,14 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const whatsappPrefilledUrl =
     "https://wa.me/905052967473?text=Merhaba%2C%20i-WALL%20%C3%BCr%C3%BCnleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
   const fullNameLabel = locale === "tr" ? "Ad Soyad" : "Full Name";
-  const submitLabel = locale === "tr" ? "Mesaj Gönder" : messages.cta.contactUs;
-  const loadingLabel = locale === "tr" ? "Gönderiliyor..." : "Sending...";
+  const submitLabel = locale === "tr" ? "Mesaj Gonder" : messages.cta.contactUs;
+  const loadingLabel = locale === "tr" ? "Gonderiliyor..." : "Sending...";
   const successMessage =
     locale === "tr"
-      ? "Mesajınız alındı. En kısa sürede size dönüş yapacağız."
+      ? "Mesajiniz alindi. En kisa surede size donus yapacagiz."
       : "Your message has been received. Our team will get back to you as soon as possible.";
+  const primaryWhatsappLabel = locale === "tr" ? "WhatsApp ile Hizli Iletisim" : "WhatsApp Quick Contact";
+  const secondaryWhatsappLabel = locale === "tr" ? "WhatsApp ile iletisime gec" : "WhatsApp ile iletişime geç";
 
   const fields = [
     { name: "name", label: fullNameLabel },
@@ -42,42 +44,42 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   return (
     <>
       <PageHero title={messages.contact.heroTitle} description={messages.contact.heroText} />
-      <section className="py-20">
+      <section className="py-24">
         <Container className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="space-y-6">
             <div className="grid gap-5 sm:grid-cols-2">
-              <div className="rounded-[1.75rem] border border-black/10 bg-white p-6 shadow-sm">
-                <h2 className="text-lg font-semibold text-ink">{messages.contact.cards.whatsapp}</h2>
-                <p className="mt-4 text-sm text-neutral-600">{siteConfig.company.whatsapp}</p>
+              <div className="rounded-[1.9rem] border border-white/10 bg-green-luxury p-6 shadow-luxury">
+                <h2 className="text-lg font-semibold tracking-[0.02em] text-white">{messages.contact.cards.whatsapp}</h2>
+                <p className="mt-4 text-sm text-white/72">{siteConfig.company.whatsapp}</p>
                 <div className="mt-5 flex flex-col gap-3">
                   <ButtonLink href={whatsappUrl} className="w-full" variant="primary">
-                    WhatsApp Quick Contact
+                    {primaryWhatsappLabel}
                   </ButtonLink>
                   <ButtonLink href={whatsappPrefilledUrl} className="w-full" variant="secondary">
-                    WhatsApp ile iletişime geç
+                    {secondaryWhatsappLabel}
                   </ButtonLink>
                 </div>
               </div>
-              <div className="rounded-[1.75rem] border border-black/10 bg-white p-6 shadow-sm">
-                <h2 className="text-lg font-semibold text-ink">{messages.contact.cards.phone}</h2>
+              <div className="rounded-[1.9rem] border border-pine/10 bg-white p-6 shadow-panel">
+                <h2 className="text-lg font-semibold tracking-[0.02em] text-pine-deep">{messages.contact.cards.phone}</h2>
                 <p className="mt-4 text-sm text-neutral-600">{siteConfig.company.phone}</p>
               </div>
-              <div className="rounded-[1.75rem] border border-black/10 bg-white p-6 shadow-sm">
-                <h2 className="text-lg font-semibold text-ink">{messages.contact.cards.email}</h2>
+              <div className="rounded-[1.9rem] border border-pine/10 bg-white p-6 shadow-panel">
+                <h2 className="text-lg font-semibold tracking-[0.02em] text-pine-deep">{messages.contact.cards.email}</h2>
                 <p className="mt-4 text-sm text-neutral-600">{siteConfig.company.email}</p>
               </div>
-              <div className="rounded-[1.75rem] border border-black/10 bg-white p-6 shadow-sm">
-                <h2 className="text-lg font-semibold text-ink">{messages.contact.cards.address}</h2>
+              <div className="rounded-[1.9rem] border border-pine/10 bg-white p-6 shadow-panel">
+                <h2 className="text-lg font-semibold tracking-[0.02em] text-pine-deep">{messages.contact.cards.address}</h2>
                 <p className="mt-4 text-sm text-neutral-600">{siteConfig.company.address}</p>
               </div>
             </div>
-            <div className="rounded-[2rem] border border-black/10 bg-white p-6 shadow-sm">
-              <h2 className="text-lg font-semibold text-ink">{messages.misc.mapPlaceholder}</h2>
+            <div className="rounded-[2rem] border border-pine/10 bg-white p-6 shadow-panel">
+              <h2 className="text-lg font-semibold tracking-[0.02em] text-pine-deep">{messages.misc.mapPlaceholder}</h2>
               <MediaPlaceholder label={messages.misc.mapPlaceholder} className="mt-5 h-64" />
             </div>
-            <div className="rounded-[1.75rem] border border-black/10 bg-[#ece4d7] p-6 shadow-sm">
+            <div className="rounded-[1.9rem] border border-white/10 bg-green-luxury p-6 shadow-luxury">
               <SocialLinks title={messages.contact.socialTitle} urls={siteConfig.company.social} />
-              <p className="mt-4 text-sm leading-7 text-neutral-600">{messages.contact.exportNote}</p>
+              <p className="mt-4 text-sm leading-7 text-white/72">{messages.contact.exportNote}</p>
             </div>
           </div>
           <InquiryForm
@@ -86,7 +88,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             submitLabel={submitLabel}
             requiredFields={["name", "phone", "email", "message"]}
             successMessage={successMessage}
-            successAlertMessage="Mesajınız alındı. En kısa sürede size dönüş yapacağız."
+            successAlertMessage="Mesajiniz alindi. En kisa surede size donus yapacagiz."
             loadingLabel={loadingLabel}
             shouldLogValues
           />

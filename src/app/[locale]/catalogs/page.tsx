@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { ResourceCard } from "@/components/site/cards";
 import { Container } from "@/components/ui/container";
+import { catalogs } from "@/lib/catalogs";
 import { PageHero } from "@/components/ui/page-hero";
 import { getMessages } from "@/lib/messages";
 import type { Locale } from "@/lib/locales";
@@ -22,8 +23,14 @@ export default async function CatalogsPage({ params }: { params: Promise<{ local
       <PageHero title={messages.catalogs.heroTitle} description={messages.catalogs.heroText} />
       <section className="py-20">
         <Container className="grid gap-6 lg:grid-cols-3">
-          {messages.catalogs.cards.map((card) => (
-            <ResourceCard key={card.title} title={card.title} description={card.description} action={messages.cta.downloadNow} href="#" />
+          {catalogs.map((catalog) => (
+            <ResourceCard
+              key={catalog.href}
+              title={catalog.title[locale]}
+              description={catalog.description[locale]}
+              action={messages.cta.downloadNow}
+              href={catalog.href}
+            />
           ))}
         </Container>
       </section>

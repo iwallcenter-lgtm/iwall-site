@@ -24,23 +24,25 @@ export function Header({ locale, messages }: HeaderProps) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-black/5 bg-[#f7f4ee]/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-pine/80 backdrop-blur-xl">
       <Container className="relative flex h-20 items-center justify-between gap-6">
-        <Logo href={`/${locale}`} label={messages.brand.name} />
+        <Logo href={`/${locale}`} label={messages.brand.name} tone="light" />
         <nav className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-medium text-neutral-700 transition hover:text-ink">
+            <Link key={link.href} href={link.href} className="text-sm font-medium tracking-[0.06em] text-white/84 transition hover:text-gold">
               {link.label}
             </Link>
           ))}
         </nav>
-        <div className="hidden items-center gap-3 lg:flex">
-          <LocaleSwitcher currentLocale={locale} />
-          <Link href={`/${locale}/dealer`} className="rounded-full bg-ink px-5 py-3 text-sm font-medium text-white transition hover:bg-neutral-800">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <LocaleSwitcher currentLocale={locale} className="max-w-[220px] lg:max-w-none" />
+          <Link href={`/${locale}/dealer`} className="hidden rounded-full bg-white px-5 py-3 text-sm font-semibold tracking-[0.08em] text-pine transition duration-200 hover:border-gold/40 hover:bg-[#f7faf8] lg:inline-flex">
             {messages.cta.becomeDealer}
           </Link>
+          <div className="lg:hidden">
+            <MobileMenu locale={locale} links={links} cta={{ href: `/${locale}/dealer`, label: messages.cta.becomeDealer }} />
+          </div>
         </div>
-        <MobileMenu locale={locale} links={links} cta={{ href: `/${locale}/dealer`, label: messages.cta.becomeDealer }} />
       </Container>
     </header>
   );

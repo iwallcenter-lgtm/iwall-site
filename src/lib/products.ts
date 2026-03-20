@@ -25,7 +25,7 @@ export const productCategories: Record<
 > = {
   dy: {
     title: {
-      tr: "DY Model",
+      tr: "Model DY",
       en: "DY Model",
       ar: "موديل DY",
       de: "DY Modell",
@@ -41,7 +41,7 @@ export const productCategories: Record<
   },
   s: {
     title: {
-      tr: "S Model",
+      tr: "Model S",
       en: "S Model",
       ar: "موديل S",
       de: "S Modell",
@@ -57,7 +57,7 @@ export const productCategories: Record<
   },
   kl: {
     title: {
-      tr: "KL Model",
+      tr: "Model KL",
       en: "KL Model",
       ar: "موديل KL",
       de: "KL Modell",

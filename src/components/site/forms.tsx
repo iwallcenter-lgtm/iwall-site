@@ -70,15 +70,15 @@ export function InquiryForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-[2rem] border border-black/10 bg-white p-6 shadow-panel sm:p-8">
+    <form onSubmit={handleSubmit} className="rounded-[2rem] border border-pine/10 bg-white p-6 shadow-panel sm:p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         {fields.map((field) =>
           field.name === "message" ? (
             <label key={field.name} className="sm:col-span-2">
-              <span className="mb-2 block text-sm font-medium text-neutral-700">{field.label}</span>
+              <span className="mb-2 block text-sm font-medium tracking-[0.04em] text-pine-deep">{field.label}</span>
               <textarea
                 rows={defaultRows}
-                className="w-full rounded-3xl border border-black/10 bg-fog px-4 py-3 text-sm text-ink outline-none transition focus:border-black/30"
+                className="w-full rounded-3xl border border-pine/10 bg-[#f7faf8] px-4 py-3 text-sm text-pine-deep outline-none transition focus:border-gold/45"
                 value={values[field.name] ?? ""}
                 disabled={isSubmitting}
                 onChange={(event) => handleChange(field.name, event.target.value)}
@@ -86,10 +86,10 @@ export function InquiryForm({
             </label>
           ) : (
             <label key={field.name}>
-              <span className="mb-2 block text-sm font-medium text-neutral-700">{field.label}</span>
+              <span className="mb-2 block text-sm font-medium tracking-[0.04em] text-pine-deep">{field.label}</span>
               <input
                 type={field.type ?? "text"}
-                className="w-full rounded-full border border-black/10 bg-fog px-4 py-3 text-sm text-ink outline-none transition focus:border-black/30"
+                className="w-full rounded-full border border-pine/10 bg-[#f7faf8] px-4 py-3 text-sm text-pine-deep outline-none transition focus:border-gold/45"
                 value={values[field.name] ?? ""}
                 disabled={isSubmitting}
                 onChange={(event) => handleChange(field.name, event.target.value)}
@@ -101,7 +101,7 @@ export function InquiryForm({
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-6 rounded-full bg-ink px-6 py-3 text-sm font-medium text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-6 rounded-full bg-pine px-6 py-3 text-sm font-semibold tracking-[0.08em] text-white shadow-luxury transition duration-200 hover:bg-pine-soft disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? loadingLabel ?? "Sending..." : submitLabel}
       </button>

@@ -8,14 +8,21 @@ import { cn } from "@/lib/utils";
 
 type LocaleSwitcherProps = {
   currentLocale: Locale;
+  className?: string;
 };
 
-export function LocaleSwitcher({ currentLocale }: LocaleSwitcherProps) {
+export function LocaleSwitcher({ currentLocale, className }: LocaleSwitcherProps) {
   const pathname = usePathname();
   const segments = pathname.split("/").filter(Boolean);
 
   return (
-    <div className="flex flex-wrap items-center gap-1.5 rounded-[1.25rem] border border-black/10 bg-white/85 p-1.5 shadow-sm backdrop-blur">
+    <div
+      className={cn(
+        "flex items-center gap-1.5 overflow-x-auto rounded-[1.25rem] border border-white/10 bg-white/10 p-1.5 shadow-sm backdrop-blur",
+        "scrollbar-none lg:flex-nowrap",
+        className
+      )}
+    >
       {languages.map((language) => {
         const nextPath = `/${[language.code, ...segments.slice(1)].join("/")}`;
         const item = localeLabels[language.code];
@@ -25,15 +32,21 @@ export function LocaleSwitcher({ currentLocale }: LocaleSwitcherProps) {
             key={language.code}
             href={nextPath}
             className={cn(
-              "inline-flex min-w-[74px] items-center justify-center gap-2 rounded-full px-3 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] transition duration-200 sm:min-w-[82px]",
+              "inline-flex shrink-0 min-w-[74px] items-center justify-center gap-2 rounded-full px-3 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] transition duration-200 sm:min-w-[82px]",
               language.code === currentLocale
-                ? "bg-ink text-white shadow-sm"
-                : "text-neutral-700 hover:bg-black/5 hover:text-ink"
+                ? "bg-white text-pine shadow-sm"
+                : "text-white/84 hover:bg-white/12 hover:text-white"
             )}
             aria-label={item.name}
             aria-current={language.code === currentLocale ? "page" : undefined}
           >
-            <span className="text-sm leading-none" aria-hidden="true">{language.flag}</span>
+            <span
+              className="text-sm leading-none"
+              aria-hidden="true"
+              style={{ fontFamily: '"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif' }}
+            >
+              {language.flag}
+            </span>
             <span>{language.label}</span>
           </Link>
         );

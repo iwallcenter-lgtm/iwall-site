@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils";
 
 export function FeatureCard({ title, description }: { title: string; description: string }) {
   return (
-    <div className="rounded-[1.75rem] border border-black/10 bg-white p-6 shadow-sm">
-      <h3 className="text-lg font-semibold text-ink">{title}</h3>
+    <div className="rounded-[1.9rem] border border-pine/10 bg-white p-7 shadow-panel">
+      <h3 className="text-lg font-semibold tracking-[0.02em] text-pine-deep">{title}</h3>
       <p className="mt-3 text-sm leading-7 text-neutral-600">{description}</p>
     </div>
   );
@@ -29,12 +29,12 @@ export function ProductCard({
   className?: string;
 }) {
   return (
-    <article className={cn("overflow-hidden rounded-[1.75rem] border border-black/10 bg-white shadow-sm", className)}>
+    <article className={cn("overflow-hidden rounded-[1.9rem] border border-pine/10 bg-white shadow-panel", className)}>
       <MediaPlaceholder label={label} className="h-72" />
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-ink">{title}</h3>
+        <h3 className="text-xl font-semibold tracking-[0.02em] text-pine-deep">{title}</h3>
         <p className="mt-3 text-sm leading-7 text-neutral-600">{description}</p>
-        <ButtonLink href={href} variant="ghost" className="mt-5 px-0">
+        <ButtonLink href={href} variant="secondary" className="mt-5">
           {action}
         </ButtonLink>
       </div>
@@ -54,13 +54,18 @@ export function ResourceCard({
   href: string;
 }) {
   return (
-    <div className="rounded-[1.75rem] border border-black/10 bg-white p-6 shadow-sm">
-      <div className="mb-5 flex h-28 items-end rounded-[1.5rem] bg-[#ddd2c1] p-5">
-        <span className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-600">PDF Placeholder</span>
+    <div className="rounded-[1.9rem] border border-pine/10 bg-white p-6 shadow-panel">
+      <div className="mb-5 flex h-28 items-end rounded-[1.5rem] bg-green-luxury p-5">
+        <span className="text-xs font-semibold uppercase tracking-[0.24em] text-white/78">PDF Placeholder</span>
       </div>
-      <h3 className="text-lg font-semibold text-ink">{title}</h3>
+      <h3 className="text-lg font-semibold tracking-[0.02em] text-pine-deep">{title}</h3>
       <p className="mt-3 text-sm leading-7 text-neutral-600">{description}</p>
-      <Link href={href} className="mt-5 inline-flex text-sm font-medium text-ink">
+      <Link
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-5 inline-flex rounded-full border border-pine/15 px-4 py-2.5 text-sm font-semibold tracking-[0.08em] text-pine transition duration-200 hover:border-gold/40 hover:bg-[#f7faf8]"
+      >
         {action}
       </Link>
     </div>

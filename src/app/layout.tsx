@@ -29,6 +29,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: siteConfig.name,
   description: "Premium architectural wall panel and decorative surface solutions.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png"
+  },
   openGraph: {
     title: siteConfig.name,
     description: "Premium architectural wall panel and decorative surface solutions.",
