@@ -3,7 +3,7 @@ import type { Locale } from "@/lib/locales";
 export const siteConfig = {
   name: "i-WALL",
   domain: "https://www.i-wall.com",
-  defaultLocale: "en",
+  defaultLocale: "tr",
   company: {
     email: "info@iwall.com.tr",
     phone: "+90 212 000 00 00",
