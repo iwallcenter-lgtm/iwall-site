@@ -35,7 +35,7 @@ export function Header({ locale, messages }: HeaderProps) {
           ))}
         </nav>
         <div className="flex items-center gap-2 sm:gap-3">
-          <LocaleSwitcher currentLocale={locale} className="max-w-[220px] lg:max-w-none" />
+          <LocaleSwitcher currentLocale={locale} className="max-w-[220px] sm:max-w-[260px] lg:max-w-none" />
           <Link href={`/${locale}/dealer`} className="hidden rounded-full bg-white px-5 py-3 text-sm font-semibold tracking-[0.08em] text-pine transition duration-200 hover:border-gold/40 hover:bg-[#f7faf8] lg:inline-flex">
             {messages.cta.becomeDealer}
           </Link>
