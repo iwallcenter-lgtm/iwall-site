@@ -43,7 +43,7 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
           <h1 className="max-w-3xl text-5xl font-semibold leading-tight tracking-[0.02em] text-white sm:text-6xl">
             {messages.home.hero.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/74">{messages.home.hero.description}</p>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/82">{messages.home.hero.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href={`/${locale}/products`}>{messages.cta.exploreProducts}</ButtonLink>
             <ButtonLink href={`/${locale}/catalogs`} variant="secondary">
@@ -60,7 +60,7 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
             {messages.home.hero.stats.map((stat) => (
               <div key={stat.label} className="rounded-[1.7rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
                 <div className="text-2xl font-semibold text-white">{stat.value}</div>
-                <div className="mt-2 text-sm text-white/68">{stat.label}</div>
+                <div className="mt-2 text-sm text-white/78">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -72,7 +72,7 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
             <div className="rounded-[1.9rem] border border-white/10 bg-white/10 p-8 text-white shadow-luxury backdrop-blur">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">i-WALL</p>
               <p className="mt-4 text-2xl font-semibold leading-tight">{messages.brand.tagline}</p>
-              <p className="mt-4 text-sm leading-7 text-white/75">{messages.home.intro.description}</p>
+              <p className="mt-4 text-sm leading-7 text-white/82">{messages.home.intro.description}</p>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Catalogs</p>
             <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">{messages.home.catalog.title}</h2>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-white/75">{messages.home.catalog.description}</p>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-white/82">{messages.home.catalog.description}</p>
           </div>
           <ButtonLink href={`/${locale}/catalogs`} variant="secondary" className="bg-white">
             {messages.cta.downloadCatalog}
@@ -189,7 +189,7 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
           </div>
           <div className="rounded-[2rem] border border-white/10 bg-green-luxury p-8 shadow-luxury">
             <h3 className="text-2xl font-semibold tracking-[0.02em] text-white">{messages.home.partnerSplit.partnerTitle}</h3>
-            <p className="mt-4 text-sm leading-7 text-white/74">{messages.home.partnerSplit.partnerText}</p>
+            <p className="mt-4 text-sm leading-7 text-white/82">{messages.home.partnerSplit.partnerText}</p>
             <ButtonLink href={`/${locale}/sales-partner`} className="mt-6">
               {messages.cta.becomePartner}
             </ButtonLink>

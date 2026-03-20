@@ -29,7 +29,7 @@ export function Header({ locale, messages }: HeaderProps) {
         <Logo href={`/${locale}`} label={messages.brand.name} tone="light" />
         <nav className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-medium tracking-[0.06em] text-white/84 transition hover:text-gold">
+            <Link key={link.href} href={link.href} className="text-sm font-medium tracking-[0.06em] text-white/92 transition hover:text-gold">
               {link.label}
             </Link>
           ))}
