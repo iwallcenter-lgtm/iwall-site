@@ -70,7 +70,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               </div>
               <div className="rounded-[1.9rem] border border-pine/10 bg-white p-6 shadow-panel">
                 <h2 className="text-lg font-semibold tracking-[0.02em] text-pine-deep">{messages.contact.cards.phone}</h2>
-                <p className="mt-4 text-sm text-neutral-600">{siteConfig.company.phone}</p>
+                <div className="mt-4 space-y-2 text-sm text-neutral-600">
+                  {siteConfig.company.phoneNumbers.map((phone) => (
+                    <p key={phone}>{phone}</p>
+                  ))}
+                </div>
               </div>
               <div className="rounded-[1.9rem] border border-pine/10 bg-white p-6 shadow-panel">
                 <h2 className="text-lg font-semibold tracking-[0.02em] text-pine-deep">{messages.contact.cards.email}</h2>

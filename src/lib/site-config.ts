@@ -7,6 +7,7 @@ export const siteConfig = {
   company: {
     email: "info@iwall.com.tr",
     phone: "+90 212 000 00 00",
+    phoneNumbers: ["+90 505 296 74 73", "+90 212 000 00 00"],
     whatsapp: "+90 505 296 74 73",
     address: "Istanbul, Türkiye",
     mapEmbedUrl: "",
