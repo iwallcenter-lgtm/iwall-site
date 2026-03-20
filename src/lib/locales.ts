@@ -1,9 +1,9 @@
 export const languages = [
-  { code: "tr", label: "TR", flag: "🇹🇷", name: "Turkce", dir: "ltr" },
-  { code: "en", label: "EN", flag: "🇺🇸", name: "English", dir: "ltr" },
-  { code: "ar", label: "AR", flag: "🇸🇦", name: "العربية", dir: "rtl" },
-  { code: "de", label: "DE", flag: "🇩🇪", name: "Deutsch", dir: "ltr" },
-  { code: "fr", label: "FR", flag: "🇫🇷", name: "Français", dir: "ltr" }
+  { code: "tr", label: "TR", flag: "\u{1F1F9}\u{1F1F7}", name: "Turkce", dir: "ltr" },
+  { code: "en", label: "EN", flag: "\u{1F1FA}\u{1F1F8}", name: "English", dir: "ltr" },
+  { code: "ar", label: "AR", flag: "\u{1F1F8}\u{1F1E6}", name: "\u0627\u0644\u0639\u0631\u0628\u064A\u0629", dir: "rtl" },
+  { code: "de", label: "DE", flag: "\u{1F1E9}\u{1F1EA}", name: "Deutsch", dir: "ltr" },
+  { code: "fr", label: "FR", flag: "\u{1F1EB}\u{1F1F7}", name: "Fran\u00E7ais", dir: "ltr" }
 ] as const;
 
 export const locales = languages.map((language) => language.code) as ["tr", "en", "ar", "de", "fr"];

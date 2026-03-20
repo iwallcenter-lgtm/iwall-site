@@ -2,9 +2,9 @@ import type { Locale } from "@/lib/locales";
 
 export const catalogLinks = {
   lambiri: "https://drive.google.com/uc?export=download&id=1Ptrpsq9GX3_eD9RRugzpBFF7YrLWlxf2",
+  dy: "https://drive.google.com/file/d/1NsiRbmMUWydItkTONT7whCtY-VPduFHy/view?usp=drive_link",
   kl: "https://drive.google.com/file/d/1ZtT2Ey_4zGBgPkdyrZZS_cGoJjsAWnyN/view?usp=drive_link",
-  s: "https://drive.google.com/file/d/1g68Cy7vXs5Ge5wANaYrgB1QXaxv6707o/view?usp=drive_link",
-  dy: "https://drive.google.com/file/d/1NsiRbmMUWydItkTONT7whCtY-VPduFHy/view?usp=drive_link"
+  s: "https://drive.google.com/file/d/1g68Cy7vXs5Ge5wANaYrgB1QXaxv6707o/view?usp=drive_link"
 } as const;
 
 export const catalogs: Array<{
@@ -30,20 +30,20 @@ export const catalogs: Array<{
     }
   },
   {
-    href: catalogLinks.s,
+    href: catalogLinks.dy,
     title: {
-      tr: "Model S",
-      en: "S Model",
-      ar: "موديل S",
-      de: "S Modell",
-      fr: "Modèle S"
+      tr: "Model DY",
+      en: "DY Model",
+      ar: "موديل DY",
+      de: "DY Modell",
+      fr: "Modèle DY"
     },
     description: {
-      tr: "Akışkan çizgiler ve modern iç mekan dili sunan Model S kataloğunu açın.",
-      en: "Open the S Model catalog for flowing lines and a modern interior language.",
-      ar: "افتح كتالوج موديل S لخطوط انسيابية وهوية داخلية حديثة.",
-      de: "Öffnen Sie den S-Modell-Katalog für fließende Linien und moderne Innenräume.",
-      fr: "Ouvrez le catalogue S Model pour des lignes fluides et une esthétique intérieure moderne."
+      tr: "Güçlü çizgiler ve mimari ritim sunan Model DY kataloğuna hemen ulaşın.",
+      en: "Access the DY Model catalog for bold lines and architectural rhythm.",
+      ar: "اطلع على كتالوج DY لخطوط قوية وإيقاع معماري واضح.",
+      de: "Greifen Sie auf den DY-Modell-Katalog für markante Linien und architektonischen Rhythmus zu.",
+      fr: "Accédez au catalogue DY Model pour des lignes fortes et un rythme architectural affirmé."
     }
   },
   {
@@ -64,20 +64,20 @@ export const catalogs: Array<{
     }
   },
   {
-    href: catalogLinks.dy,
+    href: catalogLinks.s,
     title: {
-      tr: "Model DY",
-      en: "DY Model",
-      ar: "موديل DY",
-      de: "DY Modell",
-      fr: "Modèle DY"
+      tr: "Model S",
+      en: "S Model",
+      ar: "موديل S",
+      de: "S Modell",
+      fr: "Modèle S"
     },
     description: {
-      tr: "Güçlü çizgiler ve mimari ritim sunan Model DY kataloğuna hemen ulaşın.",
-      en: "Access the DY Model catalog for bold lines and architectural rhythm.",
-      ar: "اطلع على كتالوج DY لخطوط قوية وإيقاع معماري واضح.",
-      de: "Greifen Sie auf den DY-Modell-Katalog für markante Linien und architektonischen Rhythmus zu.",
-      fr: "Accédez au catalogue DY Model pour des lignes fortes et un rythme architectural affirmé."
+      tr: "Akışkan çizgiler ve modern iç mekan dili sunan Model S kataloğunu açın.",
+      en: "Open the S Model catalog for flowing lines and a modern interior language.",
+      ar: "افتح كتالوج موديل S لخطوط انسيابية وهوية داخلية حديثة.",
+      de: "Öffnen Sie den S-Modell-Katalog für fließende Linien und moderne Innenräume.",
+      fr: "Ouvrez le catalogue S Model pour des lignes fluides et une esthétique intérieure moderne."
     }
   }
 ];

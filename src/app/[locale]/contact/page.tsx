@@ -30,8 +30,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     locale === "tr"
       ? "Mesajiniz alindi. En kisa surede size donus yapacagiz."
       : "Your message has been received. Our team will get back to you as soon as possible.";
-  const primaryWhatsappLabel = locale === "tr" ? "WhatsApp ile iletişime geç" : "WhatsApp Quick Contact";
-  const secondaryWhatsappLabel = locale === "tr" ? "Hazır mesaj ile iletişime geç" : "WhatsApp ile iletişime geç";
+  const primaryWhatsappLabel =
+    locale === "tr" ? "WhatsApp ile ileti\u015Fime ge\u00E7" : "WhatsApp Quick Contact";
+  const secondaryWhatsappLabel =
+    locale === "tr" ? "Haz\u0131r mesaj ile ileti\u015Fime ge\u00E7" : "WhatsApp ile ileti\u015Fime ge\u00E7";
 
   const fields = [
     { name: "name", label: fullNameLabel },
