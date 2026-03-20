@@ -189,7 +189,7 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
           </div>
           <div className="rounded-[2rem] border border-white/10 bg-green-luxury p-8 shadow-luxury">
             <h3 className="text-2xl font-semibold tracking-[0.02em] text-white">{messages.home.partnerSplit.partnerTitle}</h3>
-            <p className="mt-4 text-sm leading-7 text-white/82">{messages.home.partnerSplit.partnerText}</p>
+            <p className="mt-4 text-sm leading-7 text-white">{messages.home.partnerSplit.partnerText}</p>
             <ButtonLink href={`/${locale}/sales-partner`} className="mt-6">
               {messages.cta.becomePartner}
             </ButtonLink>
