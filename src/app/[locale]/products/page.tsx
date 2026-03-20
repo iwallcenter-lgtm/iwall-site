@@ -47,6 +47,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
                 description={product.summary[locale]}
                 label={product.imageLabel}
                 imageSrc={product.imageSrc}
+                imageAlt={product.imageAlt}
                 action={messages.cta.viewDetails}
               />
             ))}

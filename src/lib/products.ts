@@ -7,6 +7,7 @@ export type Product = {
   category: ProductCategoryKey;
   imageLabel: string;
   imageSrc?: string;
+  imageAlt?: string;
   dimensions: string;
   finishes: string[];
   summary: Record<Locale, string>;
@@ -112,6 +113,7 @@ export const products: Product[] = [
     category: "dy",
     imageLabel: "DY Rib 01",
     imageSrc: "/images/dy-rib-01.jpg",
+    imageAlt: "DY Rib 01 modern duvar paneli gorseli",
     dimensions: "1220 x 2800 mm",
     finishes: ["Warm Sand", "Graphite Stone", "Soft Greige"],
     title: {
@@ -181,7 +183,8 @@ export const products: Product[] = [
     slug: "s-curve-02",
     category: "s",
     imageLabel: "S Curve 02",
-    imageSrc: "/images/s-curve-02.png",
+    imageSrc: "/images/s-curve-02.jpg",
+    imageAlt: "S Curve 02 modern duvar paneli gorseli",
     dimensions: "1200 x 3000 mm",
     finishes: ["Clay Beige", "Ivory Limestone", "Taupe Mineral"],
     title: {
@@ -252,6 +255,7 @@ export const products: Product[] = [
     category: "kl",
     imageLabel: "KL Linear 03",
     imageSrc: "/images/kl-linear-03.jpg",
+    imageAlt: "KL Linear 03 modern duvar paneli gorseli",
     dimensions: "1180 x 2800 mm",
     finishes: ["Urban Bone", "Cement Beige", "Soft Ash"],
     title: {
@@ -321,6 +325,8 @@ export const products: Product[] = [
     slug: "lambiri-oak-04",
     category: "lambiri",
     imageLabel: "Lambiri Oak 04",
+    imageSrc: "/images/lambiri-oak-04.jpg",
+    imageAlt: "Lambiri Oak 04 modern duvar paneli gorseli",
     dimensions: "190 x 2900 mm",
     finishes: ["Natural Oak", "Smoked Oak", "Light Walnut"],
     title: {
@@ -390,6 +396,8 @@ export const products: Product[] = [
     slug: "acoustic-grid-05",
     category: "wall-solutions",
     imageLabel: "Acoustic Grid 05",
+    imageSrc: "/images/acoustic-grid-05.jpg",
+    imageAlt: "Acoustic Grid 05 modern duvar paneli gorseli",
     dimensions: "600 x 2400 mm",
     finishes: ["Fossil Beige", "Urban Gray", "Deep Olive"],
     title: {

@@ -5,10 +5,11 @@ import { cn } from "@/lib/utils";
 type MediaPlaceholderProps = {
   label: string;
   imageSrc?: string;
+  altText?: string;
   className?: string;
 };
 
-export function MediaPlaceholder({ label, imageSrc, className }: MediaPlaceholderProps) {
+export function MediaPlaceholder({ label, imageSrc, altText, className }: MediaPlaceholderProps) {
   return (
     <div
       className={cn(
@@ -20,7 +21,13 @@ export function MediaPlaceholder({ label, imageSrc, className }: MediaPlaceholde
     >
       {imageSrc ? (
         <>
-          <Image src={imageSrc} alt={label} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover" />
+          <Image
+            src={imageSrc}
+            alt={altText ?? label}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,19,16,0.12)_0%,rgba(8,19,16,0.28)_52%,rgba(8,19,16,0.72)_100%)]" />
         </>
       ) : null}

@@ -57,7 +57,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     <section className="py-20">
       <Container className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="space-y-5">
-          <MediaPlaceholder label={product.imageLabel} imageSrc={product.imageSrc} className="h-[26rem]" />
+          <MediaPlaceholder label={product.imageLabel} imageSrc={product.imageSrc} altText={product.imageAlt} className="h-[26rem]" />
           <div className="grid gap-5 sm:grid-cols-2">
             <MediaPlaceholder label={`${product.imageLabel} Detail A`} className="h-48" />
             <MediaPlaceholder label={`${product.imageLabel} Detail B`} className="h-48" />
@@ -128,6 +128,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               description={item.summary[locale]}
               label={item.imageLabel}
               imageSrc={item.imageSrc}
+              imageAlt={item.imageAlt}
               action={messages.cta.viewDetails}
             />
           ))}
