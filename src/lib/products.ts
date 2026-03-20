@@ -6,6 +6,7 @@ export type Product = {
   slug: string;
   category: ProductCategoryKey;
   imageLabel: string;
+  imageSrc?: string;
   dimensions: string;
   finishes: string[];
   summary: Record<Locale, string>;
@@ -110,6 +111,7 @@ export const products: Product[] = [
     slug: "dy-rib-01",
     category: "dy",
     imageLabel: "DY Rib 01",
+    imageSrc: "/images/dy-rib-01.jpg",
     dimensions: "1220 x 2800 mm",
     finishes: ["Warm Sand", "Graphite Stone", "Soft Greige"],
     title: {
@@ -179,6 +181,7 @@ export const products: Product[] = [
     slug: "s-curve-02",
     category: "s",
     imageLabel: "S Curve 02",
+    imageSrc: "/images/s-curve-02.png",
     dimensions: "1200 x 3000 mm",
     finishes: ["Clay Beige", "Ivory Limestone", "Taupe Mineral"],
     title: {
@@ -248,6 +251,7 @@ export const products: Product[] = [
     slug: "kl-linear-03",
     category: "kl",
     imageLabel: "KL Linear 03",
+    imageSrc: "/images/kl-linear-03.jpg",
     dimensions: "1180 x 2800 mm",
     finishes: ["Urban Bone", "Cement Beige", "Soft Ash"],
     title: {

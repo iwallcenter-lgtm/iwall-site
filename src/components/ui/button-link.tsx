@@ -8,12 +8,16 @@ type ButtonLinkProps = {
   children: ReactNode;
   variant?: "primary" | "secondary" | "ghost";
   className?: string;
+  target?: string;
+  rel?: string;
 };
 
-export function ButtonLink({ href, children, variant = "primary", className }: ButtonLinkProps) {
+export function ButtonLink({ href, children, variant = "primary", className, target, rel }: ButtonLinkProps) {
   return (
     <Link
       href={href}
+      target={target}
+      rel={rel}
       className={cn(
         "inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold tracking-[0.08em] transition duration-200",
         variant === "primary" && "bg-pine text-white shadow-luxury hover:bg-pine-soft hover:shadow-[0_0_24px_rgba(212,175,55,0.18)]",

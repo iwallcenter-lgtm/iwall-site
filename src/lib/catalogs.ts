@@ -1,12 +1,19 @@
 import type { Locale } from "@/lib/locales";
 
+export const catalogLinks = {
+  lambiri: "https://drive.google.com/uc?export=download&id=1Ptrpsq9GX3_eD9RRugzpBFF7YrLWlxf2",
+  kl: "https://drive.google.com/file/d/1ZtT2Ey_4zGBgPkdyrZZS_cGoJjsAWnyN/view?usp=drive_link",
+  s: "https://drive.google.com/file/d/1g68Cy7vXs5Ge5wANaYrgB1QXaxv6707o/view?usp=drive_link",
+  dy: "https://drive.google.com/file/d/1NsiRbmMUWydItkTONT7whCtY-VPduFHy/view?usp=drive_link"
+} as const;
+
 export const catalogs: Array<{
   href: string;
   title: Record<Locale, string>;
   description: Record<Locale, string>;
 }> = [
   {
-    href: "/catalogs/lambiri.pdf",
+    href: catalogLinks.lambiri,
     title: {
       tr: "Lambiri Koleksiyonu",
       en: "Lambiri Collection",
@@ -23,7 +30,7 @@ export const catalogs: Array<{
     }
   },
   {
-    href: "/catalogs/s-model.pdf",
+    href: catalogLinks.s,
     title: {
       tr: "Model S",
       en: "S Model",
@@ -40,7 +47,7 @@ export const catalogs: Array<{
     }
   },
   {
-    href: "/catalogs/kl-model.pdf",
+    href: catalogLinks.kl,
     title: {
       tr: "Model KL",
       en: "KL Model",
@@ -57,7 +64,7 @@ export const catalogs: Array<{
     }
   },
   {
-    href: "/catalogs/dy-model.pdf",
+    href: catalogLinks.dy,
     title: {
       tr: "Model DY",
       en: "DY Model",

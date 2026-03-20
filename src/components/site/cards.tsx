@@ -18,6 +18,7 @@ export function ProductCard({
   title,
   description,
   label,
+  imageSrc,
   action,
   className
 }: {
@@ -25,12 +26,13 @@ export function ProductCard({
   title: string;
   description: string;
   label: string;
+  imageSrc?: string;
   action: string;
   className?: string;
 }) {
   return (
     <article className={cn("overflow-hidden rounded-[1.9rem] border border-pine/10 bg-white shadow-panel", className)}>
-      <MediaPlaceholder label={label} className="h-72" />
+      <MediaPlaceholder label={label} imageSrc={imageSrc} className="h-72" />
       <div className="p-6">
         <h3 className="text-xl font-semibold tracking-[0.02em] text-pine-deep">{title}</h3>
         <p className="mt-3 text-sm leading-7 text-neutral-600">{description}</p>

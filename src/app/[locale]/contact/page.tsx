@@ -52,10 +52,16 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 <h2 className="text-lg font-semibold tracking-[0.02em] text-white">{messages.contact.cards.whatsapp}</h2>
                 <p className="mt-4 text-sm text-white/82">{siteConfig.company.whatsapp}</p>
                 <div className="mt-5 flex flex-col gap-3">
-                  <ButtonLink href={whatsappUrl} className="w-full" variant="primary">
+                  <ButtonLink href={whatsappUrl} className="w-full" variant="primary" target="_blank" rel="noopener noreferrer">
                     {primaryWhatsappLabel}
                   </ButtonLink>
-                  <ButtonLink href={whatsappPrefilledUrl} className="w-full" variant="secondary">
+                  <ButtonLink
+                    href={whatsappPrefilledUrl}
+                    className="w-full"
+                    variant="secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {secondaryWhatsappLabel}
                   </ButtonLink>
                 </div>
