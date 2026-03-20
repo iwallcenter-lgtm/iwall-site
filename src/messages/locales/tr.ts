@@ -40,7 +40,7 @@ export const tr = {
   home: {
     hero: {
       eyebrow: "Premium Mimari Yüzeyler",
-      title: "Modern projeler ve uluslararası büyüme için tasarlanmış modern duvar panel sistemleri.",
+      title: "Modern projeler ve yaşam alanları için tasarlanmış şık ve kullanışlı duvar panel çözümleri.",
       description:
         "i-WALL; distribütörler, bayiler, mimarlar, müteahhitler ve proje alıcıları için rafine dekoratif yüzeyler sunar. Premium sunum, güvenilir kalite ve ölçeklenebilir tedarik yaklaşımını bir araya getirir.",
       stats: [
