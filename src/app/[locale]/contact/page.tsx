@@ -52,7 +52,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="rounded-[1.9rem] border border-white/10 bg-green-luxury p-6 shadow-luxury">
                 <h2 className="text-lg font-semibold tracking-[0.02em] text-white">{messages.contact.cards.whatsapp}</h2>
-                <p className="mt-4 text-sm text-white/82">{siteConfig.company.whatsapp}</p>
+                <p className="mt-4 text-sm text-white">{siteConfig.company.whatsapp}</p>
                 <div className="mt-5 flex flex-col gap-3">
                   <ButtonLink href={whatsappUrl} className="w-full" variant="primary" target="_blank" rel="noopener noreferrer">
                     {primaryWhatsappLabel}
@@ -87,7 +87,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </div>
             <div className="rounded-[1.9rem] border border-white/10 bg-green-luxury p-6 shadow-luxury">
               <SocialLinks title={messages.contact.socialTitle} urls={siteConfig.company.social} />
-              <p className="mt-4 text-sm leading-7 text-white/82">{messages.contact.exportNote}</p>
+              <p className="mt-4 text-sm leading-7 text-white">{messages.contact.exportNote}</p>
             </div>
           </div>
           <InquiryForm

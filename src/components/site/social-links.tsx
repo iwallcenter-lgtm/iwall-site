@@ -31,7 +31,7 @@ type SocialLinksProps = {
 export function SocialLinks({ title, urls, className }: SocialLinksProps) {
   return (
     <div className={cn("space-y-4", className)}>
-      <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-white/82">{title}</h3>
+      <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-white">{title}</h3>
       <div className="flex flex-wrap gap-3">
         {(Object.keys(socialIcons) as Array<keyof typeof socialIcons>).map((key) => {
           const Icon = socialIcons[key];

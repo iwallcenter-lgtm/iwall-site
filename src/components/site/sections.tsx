@@ -39,11 +39,11 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
       <div className="absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.18),transparent_40%)]" />
       <Container className="grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
         <div>
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.32em] text-gold">{messages.home.hero.eyebrow}</p>
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.32em] text-white">{messages.home.hero.eyebrow}</p>
           <h1 className="max-w-3xl text-5xl font-semibold leading-tight tracking-[0.02em] text-white sm:text-6xl">
             {messages.home.hero.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/82">{messages.home.hero.description}</p>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white">{messages.home.hero.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href={`/${locale}/products`}>{messages.cta.exploreProducts}</ButtonLink>
             <ButtonLink href={`/${locale}/catalogs`} variant="secondary">
@@ -60,7 +60,7 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
             {messages.home.hero.stats.map((stat) => (
               <div key={stat.label} className="rounded-[1.7rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
                 <div className="text-2xl font-semibold text-white">{stat.value}</div>
-                <div className="mt-2 text-sm text-white/78">{stat.label}</div>
+                <div className="mt-2 text-sm text-white">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -70,9 +70,9 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
           <div className="grid gap-4">
             <MediaPlaceholder label="Hero Surface 02" className="h-40 sm:h-44" />
             <div className="rounded-[1.9rem] border border-white/10 bg-white/10 p-8 text-white shadow-luxury backdrop-blur">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">i-WALL</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white">i-WALL</p>
               <p className="mt-4 text-2xl font-semibold leading-tight">{messages.brand.tagline}</p>
-              <p className="mt-4 text-sm leading-7 text-white/82">{messages.home.intro.description}</p>
+              <p className="mt-4 text-sm leading-7 text-white">{messages.home.intro.description}</p>
             </div>
           </div>
         </div>
@@ -149,9 +149,9 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
       <section className="bg-white py-24">
         <Container className="grid gap-8 rounded-[2rem] border border-white/10 bg-green-luxury p-8 text-white shadow-luxury sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Catalogs</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white">Catalogs</p>
             <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">{messages.home.catalog.title}</h2>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-white/82">{messages.home.catalog.description}</p>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-white">{messages.home.catalog.description}</p>
           </div>
           <ButtonLink href={`/${locale}/catalogs`} variant="secondary" className="bg-white">
             {messages.cta.downloadCatalog}

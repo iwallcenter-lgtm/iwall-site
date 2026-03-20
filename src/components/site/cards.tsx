@@ -58,7 +58,7 @@ export function ResourceCard({
   return (
     <div className="rounded-[1.9rem] border border-pine/10 bg-white p-6 shadow-panel">
       <div className="mb-5 flex h-28 items-end rounded-[1.5rem] bg-green-luxury p-5">
-        <span className="text-xs font-semibold uppercase tracking-[0.24em] text-white/78">PDF Placeholder</span>
+        <span className="text-xs font-semibold uppercase tracking-[0.24em] text-white">PDF Placeholder</span>
       </div>
       <h3 className="text-lg font-semibold tracking-[0.02em] text-pine-deep">{title}</h3>
       <p className="mt-3 text-sm leading-7 text-neutral-600">{description}</p>
