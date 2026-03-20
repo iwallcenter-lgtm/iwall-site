@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 import { InquiryForm } from "@/components/site/forms";
+import { SocialLinks } from "@/components/site/social-links";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { MediaPlaceholder } from "@/components/ui/media-placeholder";
@@ -76,12 +76,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <MediaPlaceholder label={messages.misc.mapPlaceholder} className="mt-5 h-64" />
             </div>
             <div className="rounded-[1.75rem] border border-black/10 bg-[#ece4d7] p-6 shadow-sm">
-              <h2 className="text-lg font-semibold text-ink">{messages.contact.cards.social}</h2>
-              <div className="mt-4 flex gap-4 text-sm font-medium text-ink">
-                <Link href={siteConfig.company.social.instagram}>Instagram</Link>
-                <Link href={siteConfig.company.social.linkedin}>LinkedIn</Link>
-                <Link href={siteConfig.company.social.youtube}>YouTube</Link>
-              </div>
+              <SocialLinks title={messages.contact.socialTitle} urls={siteConfig.company.social} />
               <p className="mt-4 text-sm leading-7 text-neutral-600">{messages.contact.exportNote}</p>
             </div>
           </div>

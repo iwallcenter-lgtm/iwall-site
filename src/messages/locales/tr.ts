@@ -164,6 +164,7 @@ export const tr = {
     heroTitle: "i-WALL ile iletişime geçin",
     heroText:
       "Ürün bilgisi, ihracat görüşmeleri, bayi iletişimi, katalog talepleri ve proje ihtiyaçları için bize ulaşın.",
+    socialTitle: "Sosyal Medyada Bizi Takip Edin",
     cards: {
       whatsapp: "WhatsApp",
       phone: "Telefon",
@@ -222,6 +223,7 @@ export const tr = {
     quickLinks: "Hızlı Linkler",
     legal: "Yasal",
     contact: "İletişim",
+    socialTitle: "Sosyal Medyada Bizi Takip Edin",
     rights: "Tüm hakları saklıdır."
   },
   misc: {

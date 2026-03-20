@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { Logo } from "@/components/site/logo";
+import { SocialLinks } from "@/components/site/social-links";
 import { Container } from "@/components/ui/container";
 import type { Locale } from "@/lib/locales";
 import { siteConfig } from "@/lib/site-config";
@@ -45,11 +46,7 @@ export function Footer({ locale, messages }: FooterProps) {
             <p>{siteConfig.company.email}</p>
             <p>{siteConfig.company.address}</p>
           </div>
-          <div className="mt-5 flex gap-4 text-sm font-medium text-ink">
-            <Link href={siteConfig.company.social.instagram}>Instagram</Link>
-            <Link href={siteConfig.company.social.linkedin}>LinkedIn</Link>
-            <Link href={siteConfig.company.social.youtube}>YouTube</Link>
-          </div>
+          <SocialLinks title={messages.footer.socialTitle} urls={siteConfig.company.social} className="mt-6" />
         </div>
       </Container>
       <Container className="mt-10 border-t border-black/10 pt-6 text-sm text-neutral-600">

@@ -164,6 +164,7 @@ export const de = {
     heroTitle: "Kontakt zu i-WALL",
     heroText:
       "Nehmen Sie Kontakt auf für Produktinformationen, Exportanfragen, Händlergespräche, Kataloge und Projektanfragen.",
+    socialTitle: "Folgen Sie uns in den sozialen Medien",
     cards: {
       whatsapp: "WhatsApp",
       phone: "Telefon",
@@ -222,6 +223,7 @@ export const de = {
     quickLinks: "Schnellzugriffe",
     legal: "Rechtliches",
     contact: "Kontakt",
+    socialTitle: "Folgen Sie uns in den sozialen Medien",
     rights: "Alle Rechte vorbehalten."
   },
   misc: {

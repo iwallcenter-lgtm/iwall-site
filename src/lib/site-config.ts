@@ -11,9 +11,12 @@ export const siteConfig = {
     address: "Istanbul, Türkiye",
     mapEmbedUrl: "",
     social: {
-      instagram: "https://instagram.com/",
-      linkedin: "https://linkedin.com/",
-      youtube: "https://youtube.com/"
+      whatsappChannel: "https://whatsapp.com/channel/0029VbBQCJN5PO0zv2bBux2L",
+      x: "https://x.com/iwalltr",
+      tiktok: "https://www.tiktok.com/@iwalltr?_r=1&_t=ZS-94pdJc341dF",
+      instagram: "https://www.instagram.com/iwalltr?igsh=dXVtYXJ3eWVwd2Ji",
+      youtube: "https://www.youtube.com/@i-WALL",
+      facebook: "https://www.facebook.com/share/1GjSaV7icB/"
     }
   }
 } as const;
