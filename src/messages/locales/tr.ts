@@ -5,7 +5,7 @@ export const tr = {
     tagline: "Mimari duvar paneli ve dekoratif yüzey çözümleri"
   },
   seo: {
-    defaultTitle: "i-WALL | Premium Duvar Paneli ve Dekoratif Yüzeyler",
+    defaultTitle: "i-WALL | Modern Duvar Panelleri ve Dekoratif Yüzeyler",
     titleTemplate: "%s | i-WALL",
     defaultDescription:
       "Distribütörler, mimarlar, müteahhitler ve proje alıcıları için premium mimari duvar paneli ve dekoratif yüzey çözümleri."
@@ -40,7 +40,7 @@ export const tr = {
   home: {
     hero: {
       eyebrow: "Premium Mimari Yüzeyler",
-      title: "Modern projeler ve uluslararası büyüme için tasarlanmış dekoratif duvar panel sistemleri.",
+      title: "Modern projeler ve uluslararası büyüme için tasarlanmış modern duvar panel sistemleri.",
       description:
         "i-WALL; distribütörler, bayiler, mimarlar, müteahhitler ve proje alıcıları için rafine dekoratif yüzeyler sunar. Premium sunum, güvenilir kalite ve ölçeklenebilir tedarik yaklaşımını bir araya getirir.",
       stats: [
