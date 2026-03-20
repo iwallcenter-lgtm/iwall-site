@@ -31,7 +31,7 @@ export function Header({ locale, messages }: HeaderProps) {
         </div>
         <nav className="hidden flex-1 items-center justify-start gap-6 lg:flex">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-medium tracking-[0.06em] text-white/92 transition hover:text-gold">
+            <Link key={link.href} href={link.href} className="text-sm font-medium tracking-[0.06em] text-white transition hover:text-white/75">
               {link.label}
             </Link>
           ))}
