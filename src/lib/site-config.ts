@@ -9,7 +9,7 @@ export const siteConfig = {
     phone: "+90 212 000 00 00",
     phoneNumbers: ["+90 505 296 74 73", "+90 212 000 00 00"],
     whatsapp: "+90 505 296 74 73",
-    address: "Istanbul, Türkiye",
+    address: "İstanbul, Ankara, İzmir, Gaziantep, Trabzon, Van, Diyarbakır, Cizre",
     mapEmbedUrl: "",
     social: {
       whatsappChannel: "https://whatsapp.com/channel/0029VbBQCJN5PO0zv2bBux2L",
