@@ -180,7 +180,7 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex items-center rounded-full border border-pine/15 px-4 py-2.5 text-sm font-semibold tracking-[0.08em] text-pine transition duration-200 hover:scale-[1.02] hover:border-gold/40 hover:bg-[#f7faf8]"
                 >
-                  Katalogu Gor
+                  Kataloğu İncele
                 </Link>
               </article>
             ))}
