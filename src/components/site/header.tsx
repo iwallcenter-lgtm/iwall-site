@@ -20,7 +20,6 @@ export function Header({ locale, messages }: HeaderProps) {
     { href: `/${locale}/catalogs`, label: messages.nav.catalogs },
     { href: `/${locale}/references`, label: messages.nav.references },
     { href: `/${locale}/documents`, label: messages.nav.documents },
-    { href: "#social-media", label: "Sosyal Medya" },
     { href: `/${locale}/contact`, label: messages.nav.contact }
   ];
 
