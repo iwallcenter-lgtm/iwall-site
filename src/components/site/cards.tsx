@@ -52,7 +52,8 @@ export function ResourceCard({
   action,
   href,
   imageSrc,
-  imageAlt
+  imageAlt,
+  imageClassName
 }: {
   title: string;
   description: string;
@@ -60,11 +61,12 @@ export function ResourceCard({
   href: string;
   imageSrc?: string;
   imageAlt?: string;
+  imageClassName?: string;
 }) {
   return (
     <div className="rounded-[1.9rem] border border-pine/10 bg-white p-6 shadow-panel">
       {imageSrc ? (
-        <img src={imageSrc} alt={imageAlt ?? title} className="catalog-image" />
+        <img src={imageSrc} alt={imageAlt ?? title} className={imageClassName ?? "catalog-image"} />
       ) : (
         <div className="mb-5 flex h-28 items-end rounded-[1.5rem] bg-green-luxury p-5">
           <span className="text-xs font-semibold uppercase tracking-[0.24em] text-white">PDF Placeholder</span>

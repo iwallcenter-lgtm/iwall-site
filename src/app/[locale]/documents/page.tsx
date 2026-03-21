@@ -16,14 +16,30 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 export default async function DocumentsPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   const messages = getMessages(locale);
+  const documentImages = [
+    { src: "/images/catalogs.jpg", alt: "Kataloglar" },
+    { src: "/images/technical.jpg", alt: "Teknik Föyler" },
+    { src: "/images/installation.jpg", alt: "Montaj Kılavuzları" },
+    { src: "/images/maintenance.jpg", alt: "Bakım Dokümanları" },
+    { src: "/images/certificates.jpg", alt: "Sertifikalar" }
+  ] as const;
 
   return (
     <>
       <PageHero title={messages.documents.heroTitle} description={messages.documents.heroText} />
       <section className="py-20">
         <Container className="grid gap-6 lg:grid-cols-3">
-          {messages.documents.items.map((item) => (
-            <ResourceCard key={item.title} title={item.title} description={item.description} action={messages.cta.learnMore} href="#" />
+          {messages.documents.items.map((item, index) => (
+            <ResourceCard
+              key={item.title}
+              title={item.title}
+              description={item.description}
+              action={messages.cta.learnMore}
+              href="#"
+              imageSrc={documentImages[index]?.src}
+              imageAlt={documentImages[index]?.alt}
+              imageClassName="catalog-cover-image"
+            />
           ))}
         </Container>
       </section>
