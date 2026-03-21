@@ -5,20 +5,31 @@ import { cn } from "@/lib/utils";
 type MediaPlaceholderProps = {
   label: string;
   imageSrc?: string;
+  backgroundImageSrc?: string;
   altText?: string;
   className?: string;
 };
 
-export function MediaPlaceholder({ label, imageSrc, altText, className }: MediaPlaceholderProps) {
+export function MediaPlaceholder({ label, imageSrc, backgroundImageSrc, altText, className }: MediaPlaceholderProps) {
   return (
     <div
       className={cn(
         "relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-green-luxury",
-        !imageSrc && "before:absolute before:inset-0 before:bg-grid-fade before:bg-[size:28px_28px] before:opacity-50",
-        !imageSrc && "after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_45%)]",
+        !imageSrc && !backgroundImageSrc && "before:absolute before:inset-0 before:bg-grid-fade before:bg-[size:28px_28px] before:opacity-50",
+        !imageSrc && !backgroundImageSrc && "after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_45%)]",
         className
       )}
     >
+      {backgroundImageSrc ? (
+        <>
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url('${backgroundImageSrc}')` }}
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,19,16,0.12)_0%,rgba(8,19,16,0.28)_52%,rgba(8,19,16,0.72)_100%)]" />
+        </>
+      ) : null}
       {imageSrc ? (
         <>
           <Image

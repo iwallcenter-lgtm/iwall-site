@@ -66,9 +66,17 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
           </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
-          <MediaPlaceholder label="Hero Surface 01" className="h-80 sm:h-96" />
+          <MediaPlaceholder
+            label="Hero Surface 01"
+            backgroundImageSrc="/images/iwall-surface-panel-hero-01.jpg"
+            className="h-80 sm:h-96"
+          />
           <div className="grid gap-4">
-            <MediaPlaceholder label="Hero Surface 02" className="h-40 sm:h-44" />
+            <MediaPlaceholder
+              label="Hero Surface 02"
+              backgroundImageSrc="/images/iwall-surface-lambrie-hero-02.jpg"
+              className="h-40 sm:h-44"
+            />
             <div className="rounded-[1.9rem] border border-white/10 bg-white/10 p-8 text-white shadow-luxury backdrop-blur">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white">i-WALL</p>
               <p className="mt-4 text-2xl font-semibold leading-tight">{messages.brand.tagline}</p>
