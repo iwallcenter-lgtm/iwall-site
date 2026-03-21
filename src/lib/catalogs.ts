@@ -11,9 +11,13 @@ export const catalogs: Array<{
   href: string;
   title: Record<Locale, string>;
   description: Record<Locale, string>;
+  imageSrc: string;
+  imageAlt: string;
 }> = [
   {
     href: catalogLinks.lambiri,
+    imageSrc: "/lambiri-oak-04.jpg",
+    imageAlt: "Lambiri",
     title: {
       tr: "Lambiri Koleksiyonu",
       en: "Lambiri Collection",
@@ -31,6 +35,8 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.s,
+    imageSrc: "/s-curve-02.jpg",
+    imageAlt: "Model S",
     title: {
       tr: "Model S",
       en: "S Model",
@@ -48,6 +54,8 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.dy,
+    imageSrc: "/dy-rib-01.jpg",
+    imageAlt: "Model DY",
     title: {
       tr: "Model DY",
       en: "DY Model",
@@ -65,6 +73,8 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.kl,
+    imageSrc: "/kl-linear-03.jpg",
+    imageAlt: "Model KL",
     title: {
       tr: "Model KL",
       en: "KL Model",

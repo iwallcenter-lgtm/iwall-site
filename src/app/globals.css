@@ -24,3 +24,12 @@ body {
 ::selection {
   background: rgba(212, 175, 55, 0.28);
 }
+
+.catalog-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 1.25rem;
+}

@@ -30,6 +30,8 @@ export default async function CatalogsPage({ params }: { params: Promise<{ local
               description={catalog.description[locale]}
               action={messages.cta.downloadNow}
               href={catalog.href}
+              imageSrc={catalog.imageSrc}
+              imageAlt={catalog.imageAlt}
             />
           ))}
         </Container>
