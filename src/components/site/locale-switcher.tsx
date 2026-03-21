@@ -19,7 +19,7 @@ export function LocaleSwitcher({ currentLocale, className }: LocaleSwitcherProps
     <div
       className={cn(
         "flex items-center gap-1.5 overflow-x-auto rounded-[1.25rem] border border-white/10 bg-white/10 p-1.5 shadow-sm backdrop-blur",
-        "scrollbar-none lg:flex-nowrap",
+        "scrollbar-none lg:gap-1 lg:flex-nowrap lg:p-1",
         className
       )}
     >
@@ -32,7 +32,7 @@ export function LocaleSwitcher({ currentLocale, className }: LocaleSwitcherProps
             key={language.code}
             href={nextPath}
             className={cn(
-              "inline-flex shrink-0 min-w-[74px] items-center justify-center gap-2 rounded-full px-3 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] transition duration-200 sm:min-w-[82px]",
+              "inline-flex shrink-0 min-w-[74px] items-center justify-center gap-2 rounded-full px-3 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] transition duration-200 sm:min-w-[82px] lg:min-w-[46px] lg:gap-1.5 lg:px-2 lg:py-2 lg:tracking-[0.12em] xl:min-w-[50px] xl:px-2.5",
               language.code === currentLocale
                 ? "bg-white text-pine shadow-sm"
                 : "text-white/84 hover:bg-white/12 hover:text-white"

@@ -26,10 +26,10 @@ export function Header({ locale, messages }: HeaderProps) {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-pine/80 backdrop-blur-xl">
       <Container className="relative flex min-h-20 flex-wrap items-center justify-between gap-x-4 gap-y-3 py-3 lg:flex-nowrap">
-        <div className="shrink-0 lg:mr-4 xl:mr-6">
+        <div className="shrink-0 lg:mr-3 xl:mr-4">
           <Logo href={`/${locale}`} label="i-WALL" tone="light" />
         </div>
-        <nav className="hidden min-w-0 flex-1 items-center justify-start gap-4 lg:flex xl:gap-5">
+        <nav className="hidden min-w-0 flex-1 items-center justify-start gap-3 lg:flex xl:gap-4">
           {links.map((link) => (
             <Link key={link.href} href={link.href} className="text-sm font-medium tracking-[0.06em] text-white transition hover:text-white/75">
               {link.label}
@@ -37,7 +37,7 @@ export function Header({ locale, messages }: HeaderProps) {
           ))}
         </nav>
         <div className="order-3 flex w-full items-center justify-start sm:justify-end lg:order-none lg:w-auto lg:shrink-0">
-          <LocaleSwitcher currentLocale={locale} className="w-full max-w-full sm:w-auto sm:max-w-[320px] lg:max-w-[290px] xl:max-w-none" />
+          <LocaleSwitcher currentLocale={locale} className="w-full max-w-full sm:w-auto sm:max-w-[320px] lg:max-w-[252px] xl:max-w-[268px]" />
         </div>
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <Link href={`/${locale}/dealer`} className="hidden rounded-full bg-white px-5 py-3 text-sm font-semibold tracking-[0.08em] text-pine transition duration-200 hover:border-gold/40 hover:bg-[#f7faf8] lg:inline-flex">
