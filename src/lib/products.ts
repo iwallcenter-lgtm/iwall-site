@@ -8,6 +8,8 @@ export type Product = {
   imageLabel: string;
   imageSrc?: string;
   imageAlt?: string;
+  detailImageA?: string;
+  detailImageB?: string;
   dimensions: string;
   finishes: string[];
   summary: Record<Locale, string>;
@@ -114,6 +116,8 @@ export const products: Product[] = [
     imageLabel: "DY Rib 01",
     imageSrc: "/images/dy-rib-01.jpg",
     imageAlt: "DY Rib 01 modern duvar paneli gorseli",
+    detailImageA: "/images/iwall-dy-rib-01-detail-a.jpg",
+    detailImageB: "/images/iwall-dy-rib-01-detail-b.jpg",
     dimensions: "1220 x 2800 mm",
     finishes: ["Warm Sand", "Graphite Stone", "Soft Greige"],
     title: {
@@ -185,6 +189,8 @@ export const products: Product[] = [
     imageLabel: "S Curve 02",
     imageSrc: "/images/s-curve-02.jpg",
     imageAlt: "S Curve 02 modern duvar paneli gorseli",
+    detailImageA: "/images/iwall-s-curve-02-detail-a.jpg",
+    detailImageB: "/images/iwall-s-curve-02-detail-b.jpg",
     dimensions: "1200 x 3000 mm",
     finishes: ["Clay Beige", "Ivory Limestone", "Taupe Mineral"],
     title: {
@@ -256,6 +262,8 @@ export const products: Product[] = [
     imageLabel: "KL Linear 03",
     imageSrc: "/images/kl-linear-03.jpg",
     imageAlt: "KL Linear 03 modern duvar paneli gorseli",
+    detailImageA: "/images/iwall-kl-linear-03-detail-a.jpg",
+    detailImageB: "/images/iwall-kl-linear-03-detail-b.jpg",
     dimensions: "1180 x 2800 mm",
     finishes: ["Urban Bone", "Cement Beige", "Soft Ash"],
     title: {

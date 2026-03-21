@@ -59,8 +59,16 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         <div className="space-y-5">
           <MediaPlaceholder label={product.imageLabel} imageSrc={product.imageSrc} altText={product.imageAlt} className="h-[26rem]" />
           <div className="grid gap-5 sm:grid-cols-2">
-            <MediaPlaceholder label={`${product.imageLabel} Detail A`} className="h-48" />
-            <MediaPlaceholder label={`${product.imageLabel} Detail B`} className="h-48" />
+            <MediaPlaceholder
+              label={`${product.imageLabel} Detail A`}
+              backgroundImageSrc={product.detailImageA}
+              className="h-48"
+            />
+            <MediaPlaceholder
+              label={`${product.imageLabel} Detail B`}
+              backgroundImageSrc={product.detailImageB}
+              className="h-48"
+            />
           </div>
         </div>
         <div>
