@@ -134,6 +134,8 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
                 title={product.title[locale]}
                 description={product.summary[locale]}
                 label={product.imageLabel}
+                imageSrc={product.imageSrc}
+                imageAlt={product.imageAlt}
                 action={messages.cta.viewDetails}
               />
             ))}
