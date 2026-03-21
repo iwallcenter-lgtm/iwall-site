@@ -69,12 +69,14 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
           <MediaPlaceholder
             label="Hero Surface 01"
             backgroundImageSrc="/images/iwall-surface-panel-hero-01.jpg"
+            showLabel={false}
             className="h-80 sm:h-96"
           />
           <div className="grid gap-4">
             <MediaPlaceholder
               label="Hero Surface 02"
               backgroundImageSrc="/images/iwall-surface-lambrie-hero-02.jpg"
+              showLabel={false}
               className="h-40 sm:h-44"
             />
             <div className="rounded-[1.9rem] border border-white/10 bg-white/10 p-8 text-white shadow-luxury backdrop-blur">

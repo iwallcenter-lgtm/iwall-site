@@ -7,10 +7,11 @@ type MediaPlaceholderProps = {
   imageSrc?: string;
   backgroundImageSrc?: string;
   altText?: string;
+  showLabel?: boolean;
   className?: string;
 };
 
-export function MediaPlaceholder({ label, imageSrc, backgroundImageSrc, altText, className }: MediaPlaceholderProps) {
+export function MediaPlaceholder({ label, imageSrc, backgroundImageSrc, altText, showLabel = true, className }: MediaPlaceholderProps) {
   return (
     <div
       className={cn(
@@ -42,9 +43,11 @@ export function MediaPlaceholder({ label, imageSrc, backgroundImageSrc, altText,
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,19,16,0.12)_0%,rgba(8,19,16,0.28)_52%,rgba(8,19,16,0.72)_100%)]" />
         </>
       ) : null}
-      <div className="absolute inset-x-6 bottom-6 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.26em] text-white/78 backdrop-blur">
-        {label}
-      </div>
+      {showLabel ? (
+        <div className="absolute inset-x-6 bottom-6 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.26em] text-white/78 backdrop-blur">
+          {label}
+        </div>
+      ) : null}
     </div>
   );
 }
