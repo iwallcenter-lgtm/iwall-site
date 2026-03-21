@@ -21,7 +21,7 @@ export default async function CatalogsPage({ params }: { params: Promise<{ local
   return (
     <>
       <PageHero title={messages.catalogs.heroTitle} description={messages.catalogs.heroText} />
-      <section className="py-20">
+      <section id="catalog-list" className="py-20">
         <Container className="grid gap-6 lg:grid-cols-3">
           {catalogs.map((catalog) => (
             <ResourceCard

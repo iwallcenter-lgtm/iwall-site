@@ -14,22 +14,22 @@ const homepageCatalogCards = [
   {
     title: "Lambiri Koleksiyonu",
     description: "Mekanda sicaklik ve cizgisel ritim olusturan lambiri yuzey cozumlerini inceleyin.",
-    href: "/catalogs/lambiri.pdf"
+    href: "#catalog-list"
   },
   {
     title: "Model S",
     description: "Yumusak gecisler ve modern yuzey hareketi sunan Model S katalogunu acin.",
-    href: "/catalogs/s-model.pdf"
+    href: "#catalog-list"
   },
   {
     title: "Model KL",
     description: "Minimal ve dengeli mekan dili icin hazirlanan Model KL koleksiyonunu goruntuleyin.",
-    href: "/catalogs/kl-model.pdf"
+    href: "#catalog-list"
   },
   {
     title: "Model DY",
     description: "Mimari ritim ve guclu cizgiler sunan Model DY kataloguna goz atin.",
-    href: "/catalogs/dy-model.pdf"
+    href: "#catalog-list"
   }
 ] as const;
 
@@ -177,9 +177,7 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
                 <h3 className="mt-3 text-xl font-semibold tracking-[0.02em] text-pine-deep">{card.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-neutral-600">{card.description}</p>
                 <Link
-                  href={card.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`/${locale}/catalogs${card.href}`}
                   className="mt-6 inline-flex items-center rounded-full border border-pine/15 px-4 py-2.5 text-sm font-semibold tracking-[0.08em] text-pine transition duration-200 hover:scale-[1.02] hover:border-gold/40 hover:bg-[#f7faf8]"
                 >
                   Kataloğu İncele
