@@ -45,7 +45,7 @@ export const tr = {
         "i-WALL; distribütörler, bayiler, mimarlar, müteahhitler ve proje alıcıları için rafine dekoratif yüzeyler sunar. Premium sunum, güvenilir kalite ve ölçeklenebilir tedarik yaklaşımını bir araya getirir.",
       stats: [
         { value: "5+", label: "Ana ürün ailesi" },
-        { value: "B2B", label: "Bayi ve proje odaklı" },
+        { value: "B2B", label: "Perakende, toptan, bayi ve proje odaklı" },
         { value: "Global", label: "İhracata hazır konumlanma" }
       ]
     },
