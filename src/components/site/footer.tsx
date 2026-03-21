@@ -40,7 +40,8 @@ export function Footer({ locale, messages }: FooterProps) {
         <div id="social-media">
           <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-white">{messages.footer.contact}</h3>
           <div className="mt-5 space-y-3 text-sm text-white">
-            <p>{siteConfig.company.phone}</p>
+            <Link href="tel:+902120000000">{siteConfig.company.phone}</Link>
+            <Link href="tel:+905052967473">0505 296 74 73</Link>
             <p>{siteConfig.company.email}</p>
             <p>{siteConfig.company.address}</p>
           </div>
