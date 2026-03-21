@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { ButtonLink } from "@/components/ui/button-link";
@@ -66,7 +67,9 @@ export function ResourceCard({
   return (
     <div className="rounded-[1.9rem] border border-pine/10 bg-white p-6 shadow-panel">
       {imageSrc ? (
-        <img src={imageSrc} alt={imageAlt ?? title} className={imageClassName ?? "catalog-image"} />
+        <div className={cn("catalog-image-wrapper", imageClassName === "catalog-cover-image" && "catalog-cover-image-wrapper")}>
+          <Image src={imageSrc} alt={imageAlt ?? title} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className={imageClassName ?? "catalog-image"} />
+        </div>
       ) : (
         <div className="mb-5 flex h-28 items-end rounded-[1.5rem] bg-green-luxury p-5">
           <span className="text-xs font-semibold uppercase tracking-[0.24em] text-white">PDF Placeholder</span>
