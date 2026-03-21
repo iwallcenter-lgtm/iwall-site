@@ -37,7 +37,7 @@ export function Footer({ locale, messages }: FooterProps) {
             <Link href={`/${locale}/shipping-information`}>{messages.legal.shippingTitle}</Link>
           </div>
         </div>
-        <div>
+        <div id="social-media">
           <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-white">{messages.footer.contact}</h3>
           <div className="mt-5 space-y-3 text-sm text-white">
             <p>{siteConfig.company.phone}</p>
