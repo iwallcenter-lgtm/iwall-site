@@ -41,13 +41,13 @@ export function LocaleSwitcher({ currentLocale, className }: LocaleSwitcherProps
             aria-current={language.code === currentLocale ? "page" : undefined}
           >
             <span
-              className="text-sm leading-none"
+              className="inline-flex h-4 w-5 shrink-0 items-center justify-center overflow-visible text-base leading-none tracking-normal normal-case"
               aria-hidden="true"
               style={{ fontFamily: '"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif' }}
             >
               {language.flag}
             </span>
-            <span>{language.label}</span>
+            <span className="shrink-0">{language.label}</span>
           </Link>
         );
       })}
