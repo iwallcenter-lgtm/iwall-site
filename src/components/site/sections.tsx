@@ -43,7 +43,12 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
       <Container className={cn("grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center", isGerman && "max-w-full overflow-x-hidden")}>
         <div className={cn(isGerman && "max-w-full overflow-x-hidden")}>
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.32em] text-white">{messages.home.hero.eyebrow}</p>
-          <h1 className="max-w-3xl text-5xl font-semibold leading-tight tracking-[0.02em] text-white sm:text-6xl">
+          <h1
+            className={cn(
+              "max-w-3xl text-5xl font-semibold leading-tight tracking-[0.02em] text-white sm:text-6xl",
+              isGerman && "max-w-full overflow-hidden break-words text-[2.2rem] sm:text-6xl"
+            )}
+          >
             {messages.home.hero.title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white">{messages.home.hero.description}</p>
