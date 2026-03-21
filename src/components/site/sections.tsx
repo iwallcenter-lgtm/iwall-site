@@ -9,6 +9,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { MediaPlaceholder } from "@/components/ui/media-placeholder";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { cn } from "@/lib/utils";
 
 const homepageCatalogCards = [
   {
@@ -34,25 +35,41 @@ const homepageCatalogCards = [
 ] as const;
 
 export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteMessages }) {
+  const isGerman = locale === "de";
+
   return (
     <section className="relative overflow-hidden border-b border-white/10 bg-green-luxury pb-16 pt-16 sm:pb-24 sm:pt-24">
       <div className="absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.18),transparent_40%)]" />
-      <Container className="grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
-        <div>
+      <Container className={cn("grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center", isGerman && "max-w-full overflow-x-hidden")}>
+        <div className={cn(isGerman && "max-w-full overflow-x-hidden")}>
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.32em] text-white">{messages.home.hero.eyebrow}</p>
           <h1 className="max-w-3xl text-5xl font-semibold leading-tight tracking-[0.02em] text-white sm:text-6xl">
             {messages.home.hero.title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white">{messages.home.hero.description}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href={`/${locale}/products`}>{messages.cta.exploreProducts}</ButtonLink>
-            <ButtonLink href={`/${locale}/catalogs`} variant="secondary">
+          <div className={cn("mt-8 flex flex-wrap gap-3", isGerman && "max-w-full overflow-x-hidden")}>
+            <ButtonLink href={`/${locale}/products`} className={cn(isGerman && "w-full max-w-full justify-center whitespace-normal text-center sm:w-auto")}>
+              {messages.cta.exploreProducts}
+            </ButtonLink>
+            <ButtonLink
+              href={`/${locale}/catalogs`}
+              variant="secondary"
+              className={cn(isGerman && "w-full max-w-full justify-center whitespace-normal text-center sm:w-auto")}
+            >
               {messages.cta.downloadCatalog}
             </ButtonLink>
-            <ButtonLink href={`/${locale}/dealer`} variant="secondary">
+            <ButtonLink
+              href={`/${locale}/dealer`}
+              variant="secondary"
+              className={cn(isGerman && "w-full max-w-full justify-center whitespace-normal text-center sm:w-auto")}
+            >
               {messages.cta.becomeDealer}
             </ButtonLink>
-            <ButtonLink href={`/${locale}/contact`} variant="ghost">
+            <ButtonLink
+              href={`/${locale}/contact`}
+              variant="ghost"
+              className={cn(isGerman && "w-full max-w-full justify-center whitespace-normal text-center sm:w-auto")}
+            >
               {messages.cta.contactUs}
             </ButtonLink>
           </div>
@@ -92,6 +109,8 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
 }
 
 export function HomeSections({ locale, messages }: { locale: Locale; messages: SiteMessages }) {
+  const isGerman = locale === "de";
+
   return (
     <>
       <section className="bg-white py-24">
@@ -159,13 +178,18 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
       </section>
 
       <section className="bg-white py-24">
-        <Container className="grid gap-8 rounded-[2rem] border border-white/10 bg-green-luxury p-8 text-white shadow-luxury sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
+        <Container
+          className={cn(
+            "grid gap-8 rounded-[2rem] border border-white/10 bg-green-luxury p-8 text-white shadow-luxury sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center",
+            isGerman && "max-w-full overflow-x-hidden"
+          )}
+        >
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white">Catalogs</p>
             <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">{messages.home.catalog.title}</h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-white">{messages.home.catalog.description}</p>
           </div>
-          <ButtonLink href={`/${locale}/catalogs`} variant="secondary" className="bg-white">
+          <ButtonLink href={`/${locale}/catalogs`} variant="secondary" className={cn("bg-white", isGerman && "w-full max-w-full whitespace-normal text-center sm:w-auto")}>
             {messages.cta.downloadCatalog}
           </ButtonLink>
         </Container>
@@ -189,18 +213,18 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
       </section>
 
       <section className="bg-white pb-24">
-        <Container className="grid gap-6 lg:grid-cols-2">
+        <Container className={cn("grid gap-6 lg:grid-cols-2", isGerman && "max-w-full overflow-x-hidden")}>
           <div className="rounded-[2rem] border border-pine/10 bg-white p-8 shadow-panel">
             <h3 className="text-2xl font-semibold tracking-[0.02em] text-pine-deep">{messages.home.partnerSplit.dealerTitle}</h3>
             <p className="mt-4 text-sm leading-7 text-neutral-600">{messages.home.partnerSplit.dealerText}</p>
-            <ButtonLink href={`/${locale}/dealer`} className="mt-6">
+            <ButtonLink href={`/${locale}/dealer`} className={cn("mt-6", isGerman && "w-full max-w-full whitespace-normal text-center sm:w-auto")}>
               {messages.cta.becomeDealer}
             </ButtonLink>
           </div>
           <div className="rounded-[2rem] border border-white/10 bg-green-luxury p-8 shadow-luxury">
             <h3 className="text-2xl font-semibold tracking-[0.02em] text-white">{messages.home.partnerSplit.partnerTitle}</h3>
             <p className="mt-4 text-sm leading-7 text-white">{messages.home.partnerSplit.partnerText}</p>
-            <ButtonLink href={`/${locale}/sales-partner`} className="mt-6">
+            <ButtonLink href={`/${locale}/sales-partner`} className={cn("mt-6", isGerman && "w-full max-w-full whitespace-normal text-center sm:w-auto")}>
               {messages.cta.becomePartner}
             </ButtonLink>
           </div>
