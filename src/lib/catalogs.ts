@@ -16,7 +16,7 @@ export const catalogs: Array<{
 }> = [
   {
     href: catalogLinks.lambiri,
-    imageSrc: "/lambiri-oak-04.jpg",
+    imageSrc: "/images/lambiri-oak-04.jpg",
     imageAlt: "Lambiri",
     title: {
       tr: "Lambiri Koleksiyonu",
@@ -35,7 +35,7 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.s,
-    imageSrc: "/s-curve-02.jpg",
+    imageSrc: "/images/s-curve-02.jpg",
     imageAlt: "Model S",
     title: {
       tr: "Model S",
@@ -54,7 +54,7 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.dy,
-    imageSrc: "/dy-rib-01.jpg",
+    imageSrc: "/images/dy-rib-01.jpg",
     imageAlt: "Model DY",
     title: {
       tr: "Model DY",
@@ -73,7 +73,7 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.kl,
-    imageSrc: "/kl-linear-03.jpg",
+    imageSrc: "/images/kl-linear-03.jpg",
     imageAlt: "Model KL",
     title: {
       tr: "Model KL",
