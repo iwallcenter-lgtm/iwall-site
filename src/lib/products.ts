@@ -157,8 +157,8 @@ export const products: Product[] = [
     },
     technicalSpecs: {
       tr: [
-        { label: "Malzeme", value: "Dekoratif panel kompozit" },
-        { label: "Kalınlık", value: "12 mm" },
+        { label: "Malzeme", value: "Dekoratif yüzey paneli" },
+        { label: "Kalınlık", value: "3 mm" },
         { label: "Uygulama", value: "İç mekan duvar yüzeyi" }
       ],
       en: [
@@ -191,7 +191,7 @@ export const products: Product[] = [
     imageAlt: "S Curve 02 modern duvar paneli gorseli",
     detailImageA: "/images/iwall-s-curve-02-detail-a.jpg",
     detailImageB: "/images/iwall-s-curve-02-detail-b.jpg",
-    dimensions: "1200 x 3000 mm",
+    dimensions: "1220 x 2800 mm",
     finishes: ["Clay Beige", "Ivory Limestone", "Taupe Mineral"],
     title: {
       tr: "S Curve 02",
@@ -231,7 +231,7 @@ export const products: Product[] = [
     technicalSpecs: {
       tr: [
         { label: "Malzeme", value: "Dekoratif yüzey paneli" },
-        { label: "Kalınlık", value: "10 mm" },
+        { label: "Kalınlık", value: "3 mm" },
         { label: "Yüzey", value: "Mat dokulu" }
       ],
       en: [
@@ -264,7 +264,7 @@ export const products: Product[] = [
     imageAlt: "KL Linear 03 modern duvar paneli gorseli",
     detailImageA: "/images/iwall-kl-linear-03-detail-a.jpg",
     detailImageB: "/images/iwall-kl-linear-03-detail-b.jpg",
-    dimensions: "1180 x 2800 mm",
+    dimensions: "1220 x 2800 mm",
     finishes: ["Urban Bone", "Cement Beige", "Soft Ash"],
     title: {
       tr: "KL Linear 03",
@@ -303,8 +303,8 @@ export const products: Product[] = [
     },
     technicalSpecs: {
       tr: [
-        { label: "Malzeme", value: "Kompozit dekoratif panel" },
-        { label: "Kalınlık", value: "11 mm" },
+        { label: "Malzeme", value: "Dekoratif yüzey paneli" },
+        { label: "Kalınlık", value: "3 mm" },
         { label: "Sınıf", value: "İç mekan kaplama" }
       ],
       en: [
