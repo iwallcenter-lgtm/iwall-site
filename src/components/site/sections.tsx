@@ -190,7 +190,7 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
           )}
         >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white">Catalogs</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white">{locale === "tr" ? "KATALOGLAR" : "Catalogs"}</p>
             <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">{messages.home.catalog.title}</h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-white">{messages.home.catalog.description}</p>
           </div>
