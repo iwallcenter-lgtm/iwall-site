@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { ProductCard } from "@/components/site/cards";
 import { Container } from "@/components/ui/container";
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 export default async function ProductsPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   const messages = getMessages(locale);
+  const catalogCategoryKeys = new Set(["dy", "s", "kl", "lambiri"]);
 
   return (
     <>
@@ -26,11 +28,23 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
           <h2 className="text-3xl font-semibold tracking-[0.02em] text-pine-deep">{messages.products.categoriesTitle}</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
             {Object.entries(productCategories).map(([key, category]) => (
-              <div key={key} className="rounded-[1.9rem] border border-pine/10 bg-white p-7 shadow-panel">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-pine-soft">{messages.products.filtersLabel}</p>
-                <h3 className="mt-3 text-xl font-semibold tracking-[0.02em] text-pine-deep">{category.title[locale]}</h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-600">{category.description[locale]}</p>
-              </div>
+              catalogCategoryKeys.has(key) ? (
+                <Link
+                  key={key}
+                  href={`/${locale}/catalogs`}
+                  className="block rounded-[1.9rem] border border-pine/10 bg-white p-7 shadow-panel"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-pine-soft">{messages.products.filtersLabel}</p>
+                  <h3 className="mt-3 text-xl font-semibold tracking-[0.02em] text-pine-deep">{category.title[locale]}</h3>
+                  <p className="mt-3 text-sm leading-7 text-neutral-600">{category.description[locale]}</p>
+                </Link>
+              ) : (
+                <div key={key} className="rounded-[1.9rem] border border-pine/10 bg-white p-7 shadow-panel">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-pine-soft">{messages.products.filtersLabel}</p>
+                  <h3 className="mt-3 text-xl font-semibold tracking-[0.02em] text-pine-deep">{category.title[locale]}</h3>
+                  <p className="mt-3 text-sm leading-7 text-neutral-600">{category.description[locale]}</p>
+                </div>
+              )
             ))}
           </div>
         </Container>
