@@ -115,6 +115,7 @@ export function HomeHero({ locale, messages }: { locale: Locale; messages: SiteM
 
 export function HomeSections({ locale, messages }: { locale: Locale; messages: SiteMessages }) {
   const isGerman = locale === "de";
+  const homepageCatalogCategoryKeys = new Set(["dy", "s", "kl", "lambiri"]);
 
   return (
     <>
@@ -129,10 +130,17 @@ export function HomeSections({ locale, messages }: { locale: Locale; messages: S
           <SectionHeading title={messages.products.categoriesTitle} />
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
             {Object.entries(productCategories).map(([key, category]) => (
-              <div key={key} className="rounded-[1.9rem] border border-pine/10 bg-white p-7 shadow-panel">
-                <h3 className="text-xl font-semibold tracking-[0.02em] text-pine-deep">{category.title[locale]}</h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-600">{category.description[locale]}</p>
-              </div>
+              homepageCatalogCategoryKeys.has(key) ? (
+                <Link key={key} href={`/${locale}/catalogs`} className="block rounded-[1.9rem] border border-pine/10 bg-white p-7 shadow-panel">
+                  <h3 className="text-xl font-semibold tracking-[0.02em] text-pine-deep">{category.title[locale]}</h3>
+                  <p className="mt-3 text-sm leading-7 text-neutral-600">{category.description[locale]}</p>
+                </Link>
+              ) : (
+                <div key={key} className="rounded-[1.9rem] border border-pine/10 bg-white p-7 shadow-panel">
+                  <h3 className="text-xl font-semibold tracking-[0.02em] text-pine-deep">{category.title[locale]}</h3>
+                  <p className="mt-3 text-sm leading-7 text-neutral-600">{category.description[locale]}</p>
+                </div>
+              )
             ))}
           </div>
         </Container>
