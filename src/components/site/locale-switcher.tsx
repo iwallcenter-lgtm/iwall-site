@@ -19,7 +19,7 @@ export function LocaleSwitcher({ currentLocale, className }: LocaleSwitcherProps
     <div
       className={cn(
         "flex items-center gap-1.5 overflow-x-auto rounded-[1.25rem] border border-white/10 bg-white/10 p-1.5 shadow-sm backdrop-blur",
-        "scrollbar-none lg:gap-1.5 lg:flex-nowrap lg:p-1.5",
+        "scrollbar-none lg:gap-2 lg:flex-nowrap lg:overflow-visible lg:p-1.5",
         className
       )}
     >
@@ -32,7 +32,7 @@ export function LocaleSwitcher({ currentLocale, className }: LocaleSwitcherProps
             key={language.code}
             href={nextPath}
             className={cn(
-              "inline-flex shrink-0 min-w-[74px] items-center justify-center gap-2 rounded-full px-3 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] transition duration-200 sm:min-w-[82px] lg:min-w-[56px] lg:gap-2 lg:px-2.5 lg:py-2 lg:tracking-[0.12em] xl:min-w-[60px] xl:px-3",
+              "inline-flex shrink-0 min-w-[74px] items-center justify-center gap-2 rounded-full px-3 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] transition duration-200 sm:min-w-[82px] lg:min-w-[68px] lg:gap-2 lg:px-3 lg:py-2 lg:tracking-[0.08em] xl:min-w-[72px]",
               language.code === currentLocale
                 ? "bg-white text-pine shadow-sm"
                 : "text-white/84 hover:bg-white/12 hover:text-white"
@@ -41,7 +41,7 @@ export function LocaleSwitcher({ currentLocale, className }: LocaleSwitcherProps
             aria-current={language.code === currentLocale ? "page" : undefined}
           >
             <span
-              className="inline-flex h-4 w-5 shrink-0 items-center justify-center overflow-visible text-[18px] leading-none tracking-normal normal-case"
+              className="inline-flex h-4 w-5 shrink-0 items-center justify-center overflow-visible text-[18px] leading-none tracking-normal normal-case lg:h-[18px] lg:w-6 lg:text-[20px]"
               aria-hidden="true"
               style={{ fontFamily: '"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif' }}
             >

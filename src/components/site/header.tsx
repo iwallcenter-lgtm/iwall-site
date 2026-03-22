@@ -37,7 +37,7 @@ export function Header({ locale, messages }: HeaderProps) {
           ))}
         </nav>
         <div className="order-3 flex w-full items-center justify-start sm:justify-end lg:order-none lg:w-auto lg:shrink-0">
-          <LocaleSwitcher currentLocale={locale} className="w-full max-w-full sm:w-auto sm:max-w-[320px] lg:max-w-[300px] xl:max-w-[320px]" />
+          <LocaleSwitcher currentLocale={locale} className="w-full max-w-full sm:w-auto sm:max-w-[320px] lg:max-w-[348px] xl:max-w-[360px]" />
         </div>
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <Link href={`/${locale}/dealer`} className="hidden rounded-full bg-white px-5 py-3 text-sm font-semibold tracking-[0.08em] text-pine transition duration-200 hover:border-gold/40 hover:bg-[#f7faf8] lg:inline-flex">
