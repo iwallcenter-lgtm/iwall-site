@@ -66,3 +66,15 @@ git push -u origin main
 4. Deploy.
 
 No special environment variables are required for the current version.
+
+## Lambiri gallery
+
+The homepage and `/[locale]/lambiriler` show all 29 approved models in numerical order. The same gallery supports Turkish, English, German, French and Arabic, with a keyboard-accessible image viewer. Model numbers and dimensions remain in the original artwork.
+
+- Gallery: `src/components/site/lambiri-gallery.tsx`
+- Labels and catalog URL: `src/lib/lambiri.ts`
+- Model manifest: `src/lib/lambiri-models.json`
+- Web images: `public/images/lambiri/`
+- Current catalog: `public/catalogs/iwall-lambiri-1-29.pdf`
+
+To regenerate the WebP copies, install Pillow and run `python scripts/prepare-lambiri-assets.py "path/to/approved/models"`. The source folder must contain `Model 1.png` through `Model 29.png`. The script preserves the complete artwork and leaves the originals unchanged. Small previews load in the grid; full-resolution copies load when a model is opened.

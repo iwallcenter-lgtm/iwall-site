@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 export const staticPages = [
   "",
   "about",
+  "lambiriler",
   "products",
   "catalogs",
   "dealer",

@@ -1,7 +1,7 @@
 import type { Locale } from "@/lib/locales";
 
 export const catalogLinks = {
-  lambiri: "https://drive.google.com/file/d/1Ptrpsg9GX3_eD9RRugzpBFF7YrLWIxf2/view?usp=drive_link",
+  lambiri: "/catalogs/iwall-lambiri-1-29.pdf",
   s: "https://drive.google.com/file/d/1NsiRbmMUWydItkTONT7whCtY-VPduFHy/view?usp=drive_link",
   dy: "https://drive.google.com/file/d/1ZtT2Ey_4zGBgPkdyrZZS_cGoJjsAWnyN/view?usp=drive_link",
   kl: "https://drive.google.com/file/d/1g68Cy7vXs5Ge5wANaYrgB1QXaxv6707o/view?usp=drive_link"

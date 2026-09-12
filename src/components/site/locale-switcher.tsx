@@ -1,56 +1,29 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-import { languages, localeLabels, type Locale } from "@/lib/locales";
+import { usePathname, useRouter } from "next/navigation";
+import { FiChevronDown } from "react-icons/fi";
+import { languages, type Locale } from "@/lib/locales";
 import { cn } from "@/lib/utils";
 
-type LocaleSwitcherProps = {
-  currentLocale: Locale;
-  className?: string;
-};
-
-export function LocaleSwitcher({ currentLocale, className }: LocaleSwitcherProps) {
+export function LocaleSwitcher({ currentLocale, className }: { currentLocale: Locale; className?: string }) {
   const pathname = usePathname();
-  const segments = pathname.split("/").filter(Boolean);
-
+  const router = useRouter();
   return (
-    <div
-      className={cn(
-        "flex items-center gap-1.5 overflow-x-auto rounded-[1.25rem] border border-white/10 bg-white/10 p-1.5 shadow-sm backdrop-blur",
-        "scrollbar-none lg:gap-1.5 lg:flex-nowrap lg:p-1.5",
-        className
-      )}
-    >
-      {languages.map((language) => {
-        const nextPath = `/${[language.code, ...segments.slice(1)].join("/")}`;
-        const item = localeLabels[language.code];
-
-        return (
-          <Link
-            key={language.code}
-            href={nextPath}
-            className={cn(
-              "inline-flex shrink-0 min-w-[74px] items-center justify-center gap-2 rounded-full px-3 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] transition duration-200 sm:min-w-[82px] lg:min-w-[56px] lg:gap-2 lg:px-2.5 lg:py-2 lg:tracking-[0.12em] xl:min-w-[60px] xl:px-3",
-              language.code === currentLocale
-                ? "bg-white text-pine shadow-sm"
-                : "text-white/84 hover:bg-white/12 hover:text-white"
-            )}
-            aria-label={item.name}
-            aria-current={language.code === currentLocale ? "page" : undefined}
-          >
-            <span
-              className="inline-flex h-4 w-5 shrink-0 items-center justify-center overflow-visible text-[18px] leading-none tracking-normal normal-case"
-              aria-hidden="true"
-              style={{ fontFamily: '"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif' }}
-            >
-              {language.flag}
-            </span>
-            <span className="shrink-0">{language.label}</span>
-          </Link>
-        );
-      })}
+    <div className={cn("relative shrink-0", className)}>
+      <select
+        aria-label="Dil / Language"
+        value={currentLocale}
+        className="h-11 w-[72px] cursor-pointer appearance-none rounded-full border border-white/25 bg-transparent pe-7 ps-4 text-sm font-medium text-white"
+        onChange={(event) => {
+          const segments = pathname.split("/").filter(Boolean);
+          router.push(`/${[event.target.value, ...segments.slice(1)].join("/")}`);
+        }}
+      >
+        {languages.map((language) => (
+          <option key={language.code} value={language.code} lang={language.code} className="bg-white text-pine-deep">{language.label}</option>
+        ))}
+      </select>
+      <FiChevronDown aria-hidden="true" className="pointer-events-none absolute end-3 top-4 h-3 w-3" />
     </div>
   );
 }

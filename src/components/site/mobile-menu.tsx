@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 import type { Locale } from "@/lib/locales";
-import { cn } from "@/lib/utils";
+import { lambiriCopy } from "@/lib/lambiri";
 
 type MobileMenuProps = {
   locale: Locale;
@@ -12,17 +12,18 @@ type MobileMenuProps = {
   cta: { href: string; label: string };
 };
 
-export function MobileMenu({ links, cta }: MobileMenuProps) {
+export function MobileMenu({ locale, links, cta }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="lg:hidden">
+    <div className="xl:hidden" onKeyDown={(event) => { if (event.key === "Escape") setOpen(false); }}>
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
         className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white"
         aria-expanded={open}
-        aria-label="Toggle menu"
+        aria-label={lambiriCopy[locale].menu}
+        aria-controls="mobile-navigation"
       >
         <span className="space-y-1.5">
           <span className="block h-0.5 w-5 bg-ink" />
@@ -30,12 +31,11 @@ export function MobileMenu({ links, cta }: MobileMenuProps) {
         </span>
       </button>
       <div
-        className={cn(
-          "absolute inset-x-5 top-full mt-4 rounded-[1.75rem] border border-black/10 bg-white p-5 shadow-panel transition",
-          open ? "opacity-100" : "pointer-events-none opacity-0"
-        )}
+        id="mobile-navigation"
+        hidden={!open}
+        className="absolute inset-x-5 top-full mt-2 max-h-[calc(100dvh-100px)] overflow-y-auto rounded-2xl border border-black/10 bg-white p-4 shadow-panel"
       >
-        <nav className="flex flex-col gap-2">
+        <nav aria-label={lambiriCopy[locale].menu} className="flex flex-col gap-2">
           {links.map((link) => (
             <Link key={link.href} href={link.href} className="rounded-2xl px-4 py-3 text-sm font-medium text-ink hover:bg-fog" onClick={() => setOpen(false)}>
               {link.label}

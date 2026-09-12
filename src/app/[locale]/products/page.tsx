@@ -31,7 +31,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
               catalogCategoryKeys.has(key) ? (
                 <Link
                   key={key}
-                  href={`/${locale}/catalogs`}
+                  href={key === "lambiri" ? `/${locale}/lambiriler` : `/${locale}/catalogs`}
                   className="block rounded-[1.9rem] border border-pine/10 bg-white p-7 shadow-panel"
                 >
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-pine-soft">{messages.products.filtersLabel}</p>

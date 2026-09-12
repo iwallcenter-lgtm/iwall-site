@@ -2,12 +2,12 @@ import type { Locale } from "@/lib/locales";
 
 export const siteConfig = {
   name: "i-WALL",
-  domain: "https://www.i-wall.com",
+  domain: "https://iwall.com.tr",
   defaultLocale: "tr",
   company: {
     email: "info@iwall.com.tr",
-    phone: "+90 212 000 00 00",
-    phoneNumbers: ["+90 505 296 74 73", "+90 212 000 00 00"],
+    phone: "+90 505 296 74 73",
+    phoneNumbers: ["+90 505 296 74 73"],
     whatsapp: "+90 505 296 74 73",
     address: "İstanbul, Ankara, İzmir, Gaziantep, Trabzon, Van, Diyarbakır, Cizre",
     mapEmbedUrl: "",

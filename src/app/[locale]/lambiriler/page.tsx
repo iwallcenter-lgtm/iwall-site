@@ -8,10 +8,10 @@ import { createPageMetadata } from "@/lib/seo";
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
   const copy = lambiriCopy[locale];
-  return createPageMetadata(locale, copy.title, copy.description);
+  return createPageMetadata(locale, copy.title, copy.description, "lambiriler");
 }
 
-export default async function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
+export default async function LambiriPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   return <LambiriGallery locale={locale} />;
 }
