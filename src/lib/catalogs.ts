@@ -1,7 +1,10 @@
 import type { Locale } from "@/lib/locales";
+import { spaceCopy } from "@/lib/spaces";
 
 export const catalogLinks = {
   lambiri: "/catalogs/iwall-lambiri-1-29.pdf",
+  rooms: "/catalogs/iwall-mekan-katalogu.pdf",
+  sectors: "/catalogs/iwall-sektorel-mekan-katalogu.pdf",
   s: "https://drive.google.com/file/d/1NsiRbmMUWydItkTONT7whCtY-VPduFHy/view?usp=drive_link",
   dy: "https://drive.google.com/file/d/1ZtT2Ey_4zGBgPkdyrZZS_cGoJjsAWnyN/view?usp=drive_link",
   kl: "https://drive.google.com/file/d/1g68Cy7vXs5Ge5wANaYrgB1QXaxv6707o/view?usp=drive_link"
@@ -15,8 +18,22 @@ export const catalogs: Array<{
   imageAlt: string;
 }> = [
   {
+    href: catalogLinks.sectors,
+    imageSrc: "/images/mekanlar/model-01-preview.webp",
+    imageAlt: "i-WALL · Model 01",
+    title: spaceCopy.sectorCatalog,
+    description: spaceCopy.sectorCaption,
+  },
+  {
+    href: catalogLinks.rooms,
+    imageSrc: "/images/catalogs/iwall-mekanlar.webp",
+    imageAlt: "i-WALL · Model 01",
+    title: spaceCopy.roomCatalog,
+    description: spaceCopy.roomCaption,
+  },
+  {
     href: catalogLinks.lambiri,
-    imageSrc: "/images/lambiri-oak-04.jpg",
+    imageSrc: "/images/lambiri/model-01-preview.webp",
     imageAlt: "Lambiri",
     title: {
       tr: "Lambiri Koleksiyonu",
@@ -35,7 +52,7 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.s,
-    imageSrc: "/images/s-curve-02.jpg",
+    imageSrc: "/images/catalogs/s-curve-02.webp",
     imageAlt: "Model S",
     title: {
       tr: "Model S",
@@ -54,7 +71,7 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.dy,
-    imageSrc: "/images/dy-rib-01.jpg",
+    imageSrc: "/images/catalogs/dy-rib-01.webp",
     imageAlt: "Model DY",
     title: {
       tr: "Model DY",
@@ -73,7 +90,7 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.kl,
-    imageSrc: "/images/kl-linear-03.jpg",
+    imageSrc: "/images/catalogs/kl-linear-03.webp",
     imageAlt: "Model KL",
     title: {
       tr: "Model KL",

@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FiArrowDown, FiArrowLeft, FiArrowRight, FiMaximize2, FiX } from "react-icons/fi";
 
 import { Container } from "@/components/ui/container";
 import { lambiriCatalog, lambiriCopy, lambiriModels } from "@/lib/lambiri";
 import type { Locale } from "@/lib/locales";
+import { spaceCopy } from "@/lib/spaces";
 
 export function LambiriGallery({ locale }: { locale: Locale }) {
   const copy = lambiriCopy[locale];
@@ -41,9 +43,12 @@ export function LambiriGallery({ locale }: { locale: Locale }) {
             <h1 className="text-3xl font-medium tracking-tight text-pine-deep sm:text-4xl">{copy.title}</h1>
             <span className="text-xs text-neutral-500 sm:text-sm">{copy.collection}</span>
           </div>
-          <a href={lambiriCatalog} download className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-pine underline-offset-4 hover:underline">
-            {copy.catalog}<FiArrowDown aria-hidden="true" />
-          </a>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <Link href={`/${locale}/mekanlar`} className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-pine underline-offset-4 hover:underline">{spaceCopy.explore[locale]}<FiArrowRight className="rtl:rotate-180" aria-hidden="true" /></Link>
+            <a href={lambiriCatalog} download className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-pine underline-offset-4 hover:underline">
+              {copy.catalog}<FiArrowDown aria-hidden="true" />
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 lg:gap-6">

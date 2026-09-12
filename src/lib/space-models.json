@@ -1,0 +1,263 @@
+[
+  {
+    "id": 1,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-01.webp",
+    "preview": "/images/mekanlar/model-01-preview.webp"
+  },
+  {
+    "id": 2,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-02.webp",
+    "preview": "/images/mekanlar/model-02-preview.webp"
+  },
+  {
+    "id": 3,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-03.webp",
+    "preview": "/images/mekanlar/model-03-preview.webp"
+  },
+  {
+    "id": 4,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-04.webp",
+    "preview": "/images/mekanlar/model-04-preview.webp"
+  },
+  {
+    "id": 5,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-05.webp",
+    "preview": "/images/mekanlar/model-05-preview.webp"
+  },
+  {
+    "id": 6,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-06.webp",
+    "preview": "/images/mekanlar/model-06-preview.webp"
+  },
+  {
+    "id": 7,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-07.webp",
+    "preview": "/images/mekanlar/model-07-preview.webp"
+  },
+  {
+    "id": 8,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-08.webp",
+    "preview": "/images/mekanlar/model-08-preview.webp"
+  },
+  {
+    "id": 9,
+    "widthCm": 15,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-09.webp",
+    "preview": "/images/mekanlar/model-09-preview.webp"
+  },
+  {
+    "id": 10,
+    "widthCm": 15,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-10.webp",
+    "preview": "/images/mekanlar/model-10-preview.webp"
+  },
+  {
+    "id": 11,
+    "widthCm": 15,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-11.webp",
+    "preview": "/images/mekanlar/model-11-preview.webp"
+  },
+  {
+    "id": 12,
+    "widthCm": 15,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-12.webp",
+    "preview": "/images/mekanlar/model-12-preview.webp"
+  },
+  {
+    "id": 13,
+    "widthCm": 15,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-13.webp",
+    "preview": "/images/mekanlar/model-13-preview.webp"
+  },
+  {
+    "id": 14,
+    "widthCm": 15,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-14.webp",
+    "preview": "/images/mekanlar/model-14-preview.webp"
+  },
+  {
+    "id": 15,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-15.webp",
+    "preview": "/images/mekanlar/model-15-preview.webp"
+  },
+  {
+    "id": 16,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-16.webp",
+    "preview": "/images/mekanlar/model-16-preview.webp"
+  },
+  {
+    "id": 17,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-17.webp",
+    "preview": "/images/mekanlar/model-17-preview.webp"
+  },
+  {
+    "id": 18,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-18.webp",
+    "preview": "/images/mekanlar/model-18-preview.webp"
+  },
+  {
+    "id": 19,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-19.webp",
+    "preview": "/images/mekanlar/model-19-preview.webp"
+  },
+  {
+    "id": 20,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-20.webp",
+    "preview": "/images/mekanlar/model-20-preview.webp"
+  },
+  {
+    "id": 21,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-21.webp",
+    "preview": "/images/mekanlar/model-21-preview.webp"
+  },
+  {
+    "id": 22,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-22.webp",
+    "preview": "/images/mekanlar/model-22-preview.webp"
+  },
+  {
+    "id": 23,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-23.webp",
+    "preview": "/images/mekanlar/model-23-preview.webp"
+  },
+  {
+    "id": 24,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-24.webp",
+    "preview": "/images/mekanlar/model-24-preview.webp"
+  },
+  {
+    "id": 25,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-25.webp",
+    "preview": "/images/mekanlar/model-25-preview.webp"
+  },
+  {
+    "id": 26,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-26.webp",
+    "preview": "/images/mekanlar/model-26-preview.webp"
+  },
+  {
+    "id": 27,
+    "widthCm": 12,
+    "lengthCm": 280,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-27.webp",
+    "preview": "/images/mekanlar/model-27-preview.webp"
+  },
+  {
+    "id": 28,
+    "widthCm": 12,
+    "lengthCm": 290,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-28.webp",
+    "preview": "/images/mekanlar/model-28-preview.webp"
+  },
+  {
+    "id": 29,
+    "widthCm": 12,
+    "lengthCm": 290,
+    "imageWidth": 1086,
+    "imageHeight": 1448,
+    "image": "/images/mekanlar/model-29.webp",
+    "preview": "/images/mekanlar/model-29-preview.webp"
+  }
+]

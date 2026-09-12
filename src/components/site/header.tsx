@@ -7,6 +7,7 @@ import { NavigationLink } from "@/components/site/navigation-link";
 import { Container } from "@/components/ui/container";
 import type { Locale } from "@/lib/locales";
 import { lambiriCopy } from "@/lib/lambiri";
+import { spaceCopy } from "@/lib/spaces";
 import type { SiteMessages } from "@/messages/schema";
 
 type HeaderProps = {
@@ -18,6 +19,7 @@ export function Header({ locale, messages }: HeaderProps) {
   const links = [
     { href: `/${locale}`, label: messages.nav.home },
     { href: `/${locale}/lambiriler`, label: lambiriCopy[locale].title },
+    { href: `/${locale}/mekanlar`, label: spaceCopy.nav[locale] },
     { href: `/${locale}/about`, label: messages.nav.about },
     { href: `/${locale}/products`, label: messages.nav.products },
     { href: `/${locale}/catalogs`, label: messages.nav.catalogs },
@@ -30,7 +32,7 @@ export function Header({ locale, messages }: HeaderProps) {
         <div className="shrink-0">
           <Logo href={`/${locale}`} label="i-WALL" tone="light" />
         </div>
-        <nav aria-label={lambiriCopy[locale].menu} className="hidden min-w-0 flex-1 items-center justify-center gap-5 xl:flex">
+        <nav aria-label={lambiriCopy[locale].menu} className="hidden min-w-0 flex-1 items-center justify-center gap-3 xl:flex 2xl:gap-5">
           {links.map((link) => (
             <NavigationLink key={link.href} href={link.href}>
               {link.label}

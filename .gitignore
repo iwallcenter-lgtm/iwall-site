@@ -1,4 +1,5 @@
 .next
+.next-sector-preview
 node_modules
 out
 dist
@@ -8,3 +9,5 @@ coverage
 *.tsbuildinfo
 public/catalogs/*.pdf
 !public/catalogs/iwall-lambiri-1-29.pdf
+!public/catalogs/iwall-mekan-katalogu.pdf
+!public/catalogs/iwall-sektorel-mekan-katalogu.pdf

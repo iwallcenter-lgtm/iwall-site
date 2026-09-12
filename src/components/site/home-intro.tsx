@@ -7,8 +7,10 @@ import { homeCopy } from "@/lib/home";
 import { lambiriCopy, lambiriModels } from "@/lib/lambiri";
 import type { Locale } from "@/lib/locales";
 import { getMessages } from "@/lib/messages";
+import { spaceCopy, spaceModels } from "@/lib/spaces";
 
 const previewModels = lambiriModels.filter((model) => [1, 7, 19, 28].includes(model.id));
+const previewSpaces = spaceModels.filter((model) => [1, 14, 28].includes(model.id));
 
 export function HomeIntro({ locale }: { locale: Locale }) {
   const copy = homeCopy[locale];
@@ -68,6 +70,24 @@ export function HomeIntro({ locale }: { locale: Locale }) {
               />
             ))}
           </Link>
+        </Container>
+      </section>
+      <section className="pb-12 sm:pb-16" aria-labelledby="home-spaces-title">
+        <Container className="max-w-[1440px]">
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-t border-pine/15 pt-7">
+            <h2 id="home-spaces-title" className="text-xl font-medium sm:text-2xl">{spaceCopy.homeTitle[locale]}</h2>
+            <Link href={`/${locale}/mekanlar`} className="inline-flex min-h-11 items-center gap-2 text-sm font-medium hover:underline hover:underline-offset-4">
+              {spaceCopy.explore[locale]}<FiArrowRight className="rtl:rotate-180" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="home-spaces-preview grid gap-5 sm:grid-cols-3">
+            {previewSpaces.map((model) => (
+              <Link key={model.id} href={`/${locale}/mekanlar`} className="group">
+                <Image src={model.preview} alt={`${model.sector[locale]} · i-WALL ${galleryCopy.model} ${model.id}`} width={model.imageWidth} height={model.imageHeight} unoptimized className="aspect-[4/3] h-auto w-full rounded-lg object-cover transition duration-300 group-hover:brightness-105" />
+                <p className="mt-3 text-sm font-semibold">{model.sector[locale]}</p>
+              </Link>
+            ))}
+          </div>
         </Container>
       </section>
     </div>
