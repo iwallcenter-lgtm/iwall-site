@@ -31,15 +31,15 @@ export function HomeIntro({ locale }: { locale: Locale }) {
               <Link href={`/${locale}/contact`} className="inline-flex min-h-12 items-center text-sm font-medium underline underline-offset-4 hover:text-pine-soft">{messages.nav.contact}</Link>
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-sand">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-[510px] overflow-hidden rounded-lg bg-[#fafaf8]">
             <Image
               src="/images/mekanlar/model-15.webp"
               alt={copy.imageAlt}
               fill
               priority
               unoptimized
-              sizes="(max-width: 1023px) 100vw, (max-width: 1440px) 55vw, 740px"
-              className="object-cover"
+              sizes="(max-width: 550px) 100vw, 510px"
+              className="object-contain"
             />
           </div>
         </Container>

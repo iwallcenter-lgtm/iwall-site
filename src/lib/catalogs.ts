@@ -1,13 +1,14 @@
 import type { Locale } from "@/lib/locales";
 import { spaceCopy } from "@/lib/spaces";
+import { panelCatalogs } from "@/lib/panels";
 
 export const catalogLinks = {
   lambiri: "/catalogs/iwall-lambiri-1-29.pdf",
   rooms: "/catalogs/iwall-mekan-katalogu.pdf",
   sectors: "/catalogs/iwall-sektorel-mekan-katalogu.pdf",
-  s: "https://drive.google.com/file/d/1NsiRbmMUWydItkTONT7whCtY-VPduFHy/view?usp=drive_link",
-  dy: "https://drive.google.com/file/d/1ZtT2Ey_4zGBgPkdyrZZS_cGoJjsAWnyN/view?usp=drive_link",
-  kl: "https://drive.google.com/file/d/1g68Cy7vXs5Ge5wANaYrgB1QXaxv6707o/view?usp=drive_link"
+  s: panelCatalogs.S,
+  dy: panelCatalogs.DY,
+  kl: panelCatalogs.KL
 } as const;
 
 export const catalogs: Array<{
@@ -52,14 +53,14 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.s,
-    imageSrc: "/images/catalogs/s-curve-02.webp",
+    imageSrc: "/images/catalogs/iwall-s-2026.webp",
     imageAlt: "Model S",
     title: {
-      tr: "Model S",
-      en: "S Model",
-      ar: "موديل S",
-      de: "S Modell",
-      fr: "Modèle S"
+      tr: "i-WALL S PANEL KATALOĞU 2026",
+      en: "i-WALL S Panel Catalog 2026",
+      ar: "كتالوج ألواح i-WALL S 2026",
+      de: "i-WALL S Paneelkatalog 2026",
+      fr: "Catalogue de panneaux i-WALL S 2026"
     },
     description: {
       tr: "Akışkan çizgiler ve modern iç mekan dili sunan Model S kataloğunu açın.",
@@ -71,14 +72,14 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.dy,
-    imageSrc: "/images/catalogs/dy-rib-01.webp",
+    imageSrc: "/images/catalogs/iwall-dy-2026.webp",
     imageAlt: "Model DY",
     title: {
-      tr: "Model DY",
-      en: "DY Model",
-      ar: "موديل DY",
-      de: "DY Modell",
-      fr: "Modèle DY"
+      tr: "i-WALL DY PANEL KATALOĞU 2026",
+      en: "i-WALL DY Panel Catalog 2026",
+      ar: "كتالوج ألواح i-WALL DY 2026",
+      de: "i-WALL DY Paneelkatalog 2026",
+      fr: "Catalogue de panneaux i-WALL DY 2026"
     },
     description: {
       tr: "Güçlü çizgiler ve mimari ritim sunan Model DY kataloğuna hemen ulaşın.",
@@ -90,14 +91,14 @@ export const catalogs: Array<{
   },
   {
     href: catalogLinks.kl,
-    imageSrc: "/images/catalogs/kl-linear-03.webp",
+    imageSrc: "/images/catalogs/iwall-kl-2026.webp",
     imageAlt: "Model KL",
     title: {
-      tr: "Model KL",
-      en: "KL Model",
-      ar: "موديل KL",
-      de: "KL Modell",
-      fr: "Modèle KL"
+      tr: "i-WALL KL PANEL KATALOĞU 2026",
+      en: "i-WALL KL Panel Catalog 2026",
+      ar: "كتالوج ألواح i-WALL KL 2026",
+      de: "i-WALL KL Paneelkatalog 2026",
+      fr: "Catalogue de panneaux i-WALL KL 2026"
     },
     description: {
       tr: "Minimal ve dengeli proje yüzeyleri için hazırlanan Model KL koleksiyonunu görüntüleyin.",

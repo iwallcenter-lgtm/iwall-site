@@ -46,7 +46,7 @@ export function SpacesGallery({ locale }: { locale: Locale }) {
       <Container className="max-w-[1440px]">
         <div className="flex flex-wrap items-center justify-between gap-5 border-b border-pine/15 pb-6">
           <h1 className="text-3xl font-medium tracking-tight sm:text-4xl">{spaceCopy.title[locale]}</h1>
-          <a href={catalogLinks.sectors} download className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold underline-offset-4 hover:underline">
+          <a href={catalogLinks.sectors} download={`${spaceCopy.sectorCatalog[locale]}.pdf`} className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold underline-offset-4 hover:underline">
             {spaceCopy.catalog[locale]}<FiArrowDown aria-hidden="true" />
           </a>
         </div>
