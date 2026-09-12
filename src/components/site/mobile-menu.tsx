@@ -18,7 +18,7 @@ export function MobileMenu({ locale, links, cta }: MobileMenuProps) {
   const pathname = usePathname();
 
   return (
-    <div className="xl:hidden" onKeyDown={(event) => { if (event.key === "Escape") setOpen(false); }}>
+    <div className="2xl:hidden" onKeyDown={(event) => { if (event.key === "Escape") setOpen(false); }}>
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}

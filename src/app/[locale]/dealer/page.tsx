@@ -43,7 +43,7 @@ export default async function DealerPage({ params }: { params: Promise<{ locale:
               ))}
             </ul>
           </div>
-          <InquiryForm messages={messages} fields={fields} submitLabel={messages.cta.sendInquiry} />
+          <InquiryForm locale={locale} messages={messages} fields={fields} submitLabel={messages.cta.sendInquiry} />
         </Container>
       </section>
     </>

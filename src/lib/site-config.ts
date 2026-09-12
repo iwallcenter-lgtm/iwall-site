@@ -9,6 +9,7 @@ export const siteConfig = {
     phone: "+90 505 296 74 73",
     phoneNumbers: ["+90 505 296 74 73"],
     whatsapp: "+90 505 296 74 73",
+    whatsappUrl: "https://wa.me/905052967473",
     address: "İstanbul, Ankara, İzmir, Gaziantep, Trabzon, Van, Diyarbakır, Cizre",
     mapEmbedUrl: "",
     social: {

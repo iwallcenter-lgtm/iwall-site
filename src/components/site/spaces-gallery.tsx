@@ -58,7 +58,6 @@ export function SpacesGallery({ locale }: { locale: Locale }) {
               {Object.entries(spaceCategories).map(([key, name]) => <option key={key} value={key}>{name[locale]}</option>)}
             </select>
           </label>
-          <p className="text-sm text-neutral-500" role="status">{visible.length} {spaceCopy.count[locale]}</p>
         </div>
         <div className="grid gap-x-5 gap-y-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-9">
           {visible.map((model, index) => (

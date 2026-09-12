@@ -41,7 +41,6 @@ export function LambiriGallery({ locale }: { locale: Locale }) {
         <div className="mb-7 flex flex-wrap items-end justify-between gap-4 border-b border-pine/15 pb-5 sm:mb-9 sm:pb-6">
           <div className="flex items-baseline gap-3 sm:gap-5">
             <h1 className="text-3xl font-medium tracking-tight text-pine-deep sm:text-4xl">{copy.title}</h1>
-            <span className="text-xs text-neutral-500 sm:text-sm">{copy.collection}</span>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <Link href={`/${locale}/mekanlar`} className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-pine underline-offset-4 hover:underline">{spaceCopy.explore[locale]}<FiArrowRight className="rtl:rotate-180" aria-hidden="true" /></Link>
@@ -102,7 +101,7 @@ export function LambiriGallery({ locale }: { locale: Locale }) {
         {active && (
           <div className="flex h-full flex-col">
             <div className="flex shrink-0 items-center justify-between border-b border-black/5 px-4 py-2">
-              <span className="text-sm" aria-live="polite">{copy.model} {active.id} <span className="mx-2 text-neutral-300">/</span> 29</span>
+              <span className="text-sm font-semibold" aria-live="polite">{copy.model} {active.id}</span>
               <button type="button" autoFocus className="gallery-control" onClick={() => setSelected(null)} aria-label={copy.close}><FiX /></button>
             </div>
             <div className="relative min-h-0 flex-1 bg-white">

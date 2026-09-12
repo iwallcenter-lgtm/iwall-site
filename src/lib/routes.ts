@@ -6,6 +6,7 @@ export const staticPages = [
   "",
   "about",
   "lambiriler",
+  "duvar-panelleri",
   "mekanlar",
   "products",
   "catalogs",

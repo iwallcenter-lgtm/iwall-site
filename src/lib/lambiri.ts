@@ -6,7 +6,6 @@ export const lambiriCatalog = "/catalogs/iwall-lambiri-1-29.pdf";
 
 type GalleryCopy = {
   title: string;
-  collection: string;
   description: string;
   model: string;
   view: string;
@@ -21,36 +20,36 @@ type GalleryCopy = {
 
 export const lambiriCopy: Record<Locale, GalleryCopy> = {
   tr: {
-    title: "Lambiriler", collection: "29 model",
-    description: "i-WALL lambiri koleksiyonu: 29 model, desenler ve ölçüler.",
+    title: "Lambiriler",
+    description: "i-WALL lambiri desenleri ve ürün ölçüleri.",
     model: "Model", view: "Büyük gör", close: "Kapat", previous: "Önceki model", next: "Sonraki model",
     catalog: "Kataloğu indir", inquiry: "Bilgi al",
     greeting: "Merhaba, bu i-WALL lambiri modeli hakkında bilgi almak istiyorum:", menu: "Menü"
   },
   en: {
-    title: "Wall panelling", collection: "29 models",
-    description: "The i-WALL wall panelling collection: 29 models, patterns and dimensions.",
+    title: "Wall panelling",
+    description: "i-WALL wall panelling designs and dimensions.",
     model: "Model", view: "Enlarge", close: "Close", previous: "Previous model", next: "Next model",
     catalog: "Download catalog", inquiry: "Enquire",
     greeting: "Hello, I would like more information about this i-WALL wall panel:", menu: "Menu"
   },
   de: {
-    title: "Wandpaneele", collection: "29 Modelle",
-    description: "Die i-WALL Wandpaneel-Kollektion: 29 Modelle, Dekore und Maße.",
+    title: "Wandpaneele",
+    description: "i-WALL Wandpaneele: Dekore und Maße.",
     model: "Modell", view: "Vergrößern", close: "Schließen", previous: "Vorheriges Modell", next: "Nächstes Modell",
     catalog: "Katalog herunterladen", inquiry: "Anfragen",
     greeting: "Hallo, ich möchte mehr über dieses i-WALL Wandpaneel erfahren:", menu: "Menü"
   },
   fr: {
-    title: "Lambris", collection: "29 modèles",
-    description: "La collection de lambris i-WALL : 29 modèles, motifs et dimensions.",
+    title: "Lambris",
+    description: "Lambris i-WALL : motifs et dimensions.",
     model: "Modèle", view: "Agrandir", close: "Fermer", previous: "Modèle précédent", next: "Modèle suivant",
     catalog: "Télécharger le catalogue", inquiry: "Se renseigner",
     greeting: "Bonjour, je souhaite des informations sur ce lambris i-WALL :", menu: "Menu"
   },
   ar: {
-    title: "ألواح الجدران", collection: "29 طرازًا",
-    description: "مجموعة ألواح الجدران من i-WALL: 29 طرازًا مع النقوش والمقاسات.",
+    title: "ألواح الجدران",
+    description: "ألواح الجدران من i-WALL مع النقوش والمقاسات.",
     model: "طراز", view: "تكبير", close: "إغلاق", previous: "الطراز السابق", next: "الطراز التالي",
     catalog: "تحميل الكتالوج", inquiry: "استفسار",
     greeting: "مرحبًا، أود معرفة المزيد عن لوح الجدران هذا من i-WALL:", menu: "القائمة"

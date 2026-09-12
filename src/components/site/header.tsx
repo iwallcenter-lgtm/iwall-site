@@ -8,6 +8,7 @@ import { Container } from "@/components/ui/container";
 import type { Locale } from "@/lib/locales";
 import { lambiriCopy } from "@/lib/lambiri";
 import { spaceCopy } from "@/lib/spaces";
+import { productCopy } from "@/lib/storefront";
 import type { SiteMessages } from "@/messages/schema";
 
 type HeaderProps = {
@@ -19,6 +20,7 @@ export function Header({ locale, messages }: HeaderProps) {
   const links = [
     { href: `/${locale}`, label: messages.nav.home },
     { href: `/${locale}/lambiriler`, label: lambiriCopy[locale].title },
+    { href: `/${locale}/duvar-panelleri`, label: productCopy.panels[locale] },
     { href: `/${locale}/mekanlar`, label: spaceCopy.nav[locale] },
     { href: `/${locale}/about`, label: messages.nav.about },
     { href: `/${locale}/products`, label: messages.nav.products },
@@ -32,7 +34,7 @@ export function Header({ locale, messages }: HeaderProps) {
         <div className="shrink-0">
           <Logo href={`/${locale}`} label="i-WALL" tone="light" />
         </div>
-        <nav aria-label={lambiriCopy[locale].menu} className="hidden min-w-0 flex-1 items-center justify-center gap-3 xl:flex 2xl:gap-5">
+        <nav aria-label={lambiriCopy[locale].menu} className="hidden min-w-0 flex-1 items-center justify-center gap-4 2xl:flex">
           {links.map((link) => (
             <NavigationLink key={link.href} href={link.href}>
               {link.label}
@@ -44,7 +46,7 @@ export function Header({ locale, messages }: HeaderProps) {
           <Link href={`/${locale}/dealer`} className="hidden whitespace-nowrap rounded-full border border-white/25 px-4 py-3 text-sm font-medium text-white transition hover:bg-white/10 sm:inline-flex">
             {messages.cta.becomeDealer}
           </Link>
-          <div className="xl:hidden">
+          <div className="2xl:hidden">
             <MobileMenu locale={locale} links={links} cta={{ href: `/${locale}/dealer`, label: messages.cta.becomeDealer }} />
           </div>
         </div>

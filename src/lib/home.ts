@@ -11,43 +11,43 @@ type HomeCopy = {
 
 export const homeCopy: Record<Locale, HomeCopy> = {
   tr: {
-    title: "Mekânınıza karakter katın.",
-    description: "Farklı renk ve dokularda 29 lambiri modeli. Tarzınıza uygun deseni seçin, detayları yakından inceleyin.",
+    title: "Mekânlarınıza değer katın",
+    description: "i-WALL lambiri ve duvar panelleriyle mekânınıza uygun renk ve dokuları keşfedin.",
     explore: "Lambirileri keşfet",
-    collection: "Lambiri koleksiyonu",
+    collection: "Lambiriler",
     viewAll: "Tüm desenleri gör",
-    imageAlt: "Açık renk lambiri duvar ve sıcak aydınlatmalı bir yaşam alanı"
+    imageAlt: "i-WALL lambirilerinin kullanıldığı güzellik salonu"
   },
   en: {
-    title: "Give your space character.",
-    description: "29 wall panel models in a range of colours and textures. Find your style and explore the details.",
+    title: "Add value to your spaces",
+    description: "Discover colours and textures for your space with i-WALL wall panelling and wall panels.",
     explore: "Explore wall panels",
-    collection: "The wall panel collection",
+    collection: "Wall panelling",
     viewAll: "View all designs",
-    imageAlt: "A living space with light-coloured wall panelling and warm lighting"
+    imageAlt: "A beauty salon with i-WALL wall panelling"
   },
   de: {
-    title: "Charakter für Ihren Raum.",
-    description: "29 Wandpaneel-Modelle in unterschiedlichen Farben und Texturen. Finden Sie Ihren Stil und entdecken Sie die Details.",
+    title: "Mehr Wert für Ihre Räume",
+    description: "Entdecken Sie passende Farben und Texturen mit Wandpaneelen und Wandplatten von i-WALL.",
     explore: "Wandpaneele entdecken",
-    collection: "Die Wandpaneel-Kollektion",
+    collection: "Wandpaneele",
     viewAll: "Alle Designs ansehen",
-    imageAlt: "Ein Wohnraum mit hellen Wandpaneelen und warmer Beleuchtung"
+    imageAlt: "Ein Schönheitssalon mit i-WALL Wandpaneelen"
   },
   fr: {
-    title: "Du caractère pour votre intérieur.",
-    description: "29 modèles de lambris aux couleurs et textures variées. Trouvez votre style et découvrez chaque détail.",
+    title: "Valorisez vos espaces",
+    description: "Découvrez les couleurs et textures pour votre intérieur avec les lambris et panneaux muraux i-WALL.",
     explore: "Découvrir les lambris",
-    collection: "La collection de lambris",
+    collection: "Lambris",
     viewAll: "Voir tous les motifs",
-    imageAlt: "Un espace de vie avec des lambris clairs et un éclairage chaleureux"
+    imageAlt: "Un salon de beauté avec des lambris i-WALL"
   },
   ar: {
-    title: "امنح مساحتك طابعًا مميزًا.",
-    description: "29 طرازًا من ألواح الجدران بألوان وملامس متنوعة. اختر التصميم الذي يناسب ذوقك واكتشف التفاصيل.",
+    title: "أضف قيمة إلى مساحاتك",
+    description: "اكتشف ألوان وملامس تناسب مساحتك مع ألواح وكسوات الجدران من i-WALL.",
     explore: "اكتشف ألواح الجدران",
-    collection: "مجموعة ألواح الجدران",
+    collection: "ألواح الجدران",
     viewAll: "عرض جميع التصاميم",
-    imageAlt: "مساحة معيشة بألواح جدران فاتحة وإضاءة دافئة"
+    imageAlt: "صالون تجميل بألواح الجدران من i-WALL"
   }
 };

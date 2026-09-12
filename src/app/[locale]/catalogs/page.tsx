@@ -32,8 +32,8 @@ export default async function CatalogsPage({ params }: { params: Promise<{ local
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {catalogs.map((catalog) => (
               <article key={catalog.href} className="catalog-card overflow-hidden rounded-lg border border-pine/10 bg-white">
-                <a href={catalog.href} target="_blank" rel="noopener noreferrer" aria-label={catalog.title[locale]} className="relative block aspect-[4/3] overflow-hidden bg-sand">
-                  <Image src={catalog.imageSrc} alt={catalog.imageAlt} fill unoptimized className="object-cover transition duration-300 hover:brightness-105" />
+                <a href={catalog.href} target="_blank" rel="noopener noreferrer" aria-label={catalog.title[locale]} className="relative block aspect-[3/4] bg-white">
+                  <Image src={catalog.imageSrc} alt={catalog.imageAlt} fill unoptimized className="object-contain transition duration-300 hover:brightness-105" />
                 </a>
                 <div className="p-5 sm:p-6">
                   <h2 className="text-xl font-semibold text-pine-deep">{catalog.title[locale]}</h2>

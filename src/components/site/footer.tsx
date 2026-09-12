@@ -16,6 +16,7 @@ export function Footer({ locale, messages }: { locale: Locale; messages: SiteMes
             <Logo href={`/${locale}`} label={messages.brand.name} compact />
             <div className="flex flex-col gap-2 text-sm">
               <a href="tel:+905052967473" dir="ltr" className="hover:text-gold">0505 296 74 73</a>
+              <a href={siteConfig.company.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gold">WhatsApp</a>
               <a href={`mailto:${siteConfig.company.email}`} className="hover:text-gold">{siteConfig.company.email}</a>
             </div>
           </div>

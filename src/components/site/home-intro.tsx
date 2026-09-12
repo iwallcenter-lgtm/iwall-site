@@ -9,8 +9,8 @@ import type { Locale } from "@/lib/locales";
 import { getMessages } from "@/lib/messages";
 import { spaceCopy, spaceModels } from "@/lib/spaces";
 
-const previewModels = lambiriModels.filter((model) => [1, 7, 19, 28].includes(model.id));
-const previewSpaces = spaceModels.filter((model) => [1, 14, 28].includes(model.id));
+const previewModels = lambiriModels.filter((model) => [1, 5, 7, 10].includes(model.id));
+const previewSpaces = spaceModels.filter((model) => [1, 7, 14].includes(model.id));
 
 export function HomeIntro({ locale }: { locale: Locale }) {
   const copy = homeCopy[locale];
@@ -23,9 +23,7 @@ export function HomeIntro({ locale }: { locale: Locale }) {
       <section className="py-8 sm:py-12 lg:py-16">
         <Container className="grid max-w-[1440px] items-center gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
           <div className="max-w-xl">
-            <p className="mb-5 text-xs font-semibold tracking-[0.28em] text-pine/65">i-WALL</p>
             <h1 className="max-w-lg text-4xl font-medium leading-[1.15] tracking-tight sm:text-5xl">{copy.title}</h1>
-            <p className="mt-5 max-w-md text-base leading-7 text-neutral-600">{copy.description}</p>
             <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
               <Link href={collectionHref} className="home-collection-link inline-flex min-h-12 items-center gap-3 rounded-full bg-pine px-6 py-3 text-sm font-medium text-white transition hover:bg-pine-deep">
                 {copy.explore}<FiArrowRight aria-hidden="true" className="rtl:rotate-180" />
@@ -35,10 +33,11 @@ export function HomeIntro({ locale }: { locale: Locale }) {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-sand">
             <Image
-              src="/images/iwall-surface-lambrie-hero-02.jpg"
+              src="/images/mekanlar/model-15.webp"
               alt={copy.imageAlt}
               fill
               priority
+              unoptimized
               sizes="(max-width: 1023px) 100vw, (max-width: 1440px) 55vw, 740px"
               className="object-cover"
             />
@@ -51,7 +50,6 @@ export function HomeIntro({ locale }: { locale: Locale }) {
           <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-t border-pine/15 pt-7">
             <div className="flex flex-wrap items-baseline gap-3">
               <h2 id="home-collection-title" className="text-xl font-medium sm:text-2xl">{copy.collection}</h2>
-              <span className="text-xs text-neutral-500">{galleryCopy.collection}</span>
             </div>
             <Link href={collectionHref} className="inline-flex min-h-11 items-center gap-2 text-sm font-medium hover:underline hover:underline-offset-4">
               {copy.viewAll}<FiArrowRight aria-hidden="true" className="rtl:rotate-180" />

@@ -42,7 +42,7 @@ export default async function SalesPartnerPage({ params }: { params: Promise<{ l
               ))}
             </ul>
           </div>
-          <InquiryForm messages={messages} fields={fields} submitLabel={messages.cta.sendApplication} />
+          <InquiryForm locale={locale} messages={messages} fields={fields} submitLabel={messages.cta.sendApplication} />
         </Container>
       </section>
     </>

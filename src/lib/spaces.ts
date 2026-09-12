@@ -9,15 +9,14 @@ export const spaceCopy = {
   title: label("Sektörel Mekânlar", "Spaces for Every Sector", "Räume für jede Branche", "Espaces par secteur", "مساحات لكل قطاع"),
   homeTitle: label("Farklı Mekânlarda i-WALL", "i-WALL in Different Spaces", "i-WALL in verschiedenen Räumen", "i-WALL dans différents espaces", "i-WALL في مساحات متنوعة"),
   explore: label("Mekânları keşfet", "Explore spaces", "Räume entdecken", "Découvrir les espaces", "اكتشف المساحات"),
-  description: label("29 i-WALL modeli; ev, mağaza, ofis ve farklı sektörlerde uygulama fikirleri.", "29 i-WALL models: interior ideas for homes, shops, offices and more.", "29 i-WALL Modelle: Raumideen für Zuhause, Geschäfte, Büros und mehr.", "29 modèles i-WALL : inspirations pour la maison, les boutiques, les bureaux et plus.", "29 طرازًا من i-WALL: أفكار للمنازل والمتاجر والمكاتب وغيرها."),
+  description: label("i-WALL ile ev, mağaza, ofis ve farklı sektörlerde uygulama fikirleri.", "Interior ideas for homes, shops, offices and more with i-WALL.", "Raumideen für Zuhause, Geschäfte, Büros und mehr mit i-WALL.", "Des inspirations i-WALL pour la maison, les boutiques, les bureaux et plus.", "أفكار من i-WALL للمنازل والمتاجر والمكاتب وغيرها."),
   all: label("Tümü", "All", "Alle", "Tous", "الكل"),
   filter: label("Kullanım alanı", "Type of space", "Raumtyp", "Type d’espace", "نوع المساحة"),
-  count: label("mekân", "spaces", "Räume", "espaces", "مساحة"),
   catalog: label("Sektörel kataloğu indir", "Download sector catalog", "Branchenkatalog herunterladen", "Télécharger le catalogue sectoriel", "تحميل كتالوج القطاعات"),
   roomCatalog: label("Mekân Kataloğu", "Interior Catalog", "Raumkatalog", "Catalogue d’intérieurs", "كتالوج المساحات الداخلية"),
   sectorCatalog: label("Sektörel Mekân Kataloğu", "Sector Interiors Catalog", "Branchen-Raumkatalog", "Catalogue d’intérieurs par secteur", "كتالوج مساحات القطاعات"),
-  roomCaption: label("29 model · Mekân uygulamaları", "29 models · Interior ideas", "29 Modelle · Raumideen", "29 modèles · Idées d’intérieurs", "29 طرازًا · أفكار للمساحات الداخلية"),
-  sectorCaption: label("29 model · 29 farklı mekân", "29 models · 29 different spaces", "29 Modelle · 29 verschiedene Räume", "29 modèles · 29 espaces différents", "29 طرازًا · 29 مساحة مختلفة"),
+  roomCaption: label("Mekân uygulamaları", "Interior ideas", "Raumideen", "Idées d’intérieurs", "أفكار للمساحات الداخلية"),
+  sectorCaption: label("Farklı sektörler için mekân fikirleri", "Interior ideas for different sectors", "Raumideen für verschiedene Branchen", "Des idées d’intérieurs pour chaque secteur", "أفكار للمساحات في مختلف القطاعات"),
   downloadImage: label("Görseli indir", "Download image", "Bild herunterladen", "Télécharger l’image", "تحميل الصورة"),
 };
 
