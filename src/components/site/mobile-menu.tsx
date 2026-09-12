@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import type { Locale } from "@/lib/locales";
 import { lambiriCopy } from "@/lib/lambiri";
@@ -14,6 +15,7 @@ type MobileMenuProps = {
 
 export function MobileMenu({ locale, links, cta }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div className="xl:hidden" onKeyDown={(event) => { if (event.key === "Escape") setOpen(false); }}>
@@ -37,7 +39,7 @@ export function MobileMenu({ locale, links, cta }: MobileMenuProps) {
       >
         <nav aria-label={lambiriCopy[locale].menu} className="flex flex-col gap-2">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="rounded-2xl px-4 py-3 text-sm font-medium text-ink hover:bg-fog" onClick={() => setOpen(false)}>
+            <Link key={link.href} href={link.href} aria-current={pathname === link.href ? "page" : undefined} className={`rounded-2xl px-4 py-3 text-sm font-medium text-ink hover:bg-fog ${pathname === link.href ? "bg-fog" : ""}`} onClick={() => setOpen(false)}>
               {link.label}
             </Link>
           ))}

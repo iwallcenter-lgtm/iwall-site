@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 
-import { LambiriGallery } from "@/components/site/lambiri-gallery";
-import { lambiriCopy } from "@/lib/lambiri";
+import { HomeIntro } from "@/components/site/home-intro";
+import { homeCopy } from "@/lib/home";
+import { getMessages } from "@/lib/messages";
 import type { Locale } from "@/lib/locales";
 import { createPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
-  const copy = lambiriCopy[locale];
-  return createPageMetadata(locale, copy.title, copy.description);
+  const copy = homeCopy[locale];
+  return createPageMetadata(locale, `i-WALL | ${getMessages(locale).nav.home}`, copy.description);
 }
 
 export default async function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
-  return <LambiriGallery locale={locale} />;
+  return <HomeIntro locale={locale} />;
 }

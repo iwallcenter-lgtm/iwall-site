@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MobileMenu } from "@/components/site/mobile-menu";
 import { LocaleSwitcher } from "@/components/site/locale-switcher";
 import { Logo } from "@/components/site/logo";
+import { NavigationLink } from "@/components/site/navigation-link";
 import { Container } from "@/components/ui/container";
 import type { Locale } from "@/lib/locales";
 import { lambiriCopy } from "@/lib/lambiri";
@@ -31,9 +32,9 @@ export function Header({ locale, messages }: HeaderProps) {
         </div>
         <nav aria-label={lambiriCopy[locale].menu} className="hidden min-w-0 flex-1 items-center justify-center gap-5 xl:flex">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="whitespace-nowrap py-3 text-sm font-medium text-white/90 transition hover:text-gold">
+            <NavigationLink key={link.href} href={link.href}>
               {link.label}
-            </Link>
+            </NavigationLink>
           ))}
         </nav>
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">

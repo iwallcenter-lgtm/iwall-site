@@ -69,7 +69,9 @@ No special environment variables are required for the current version.
 
 ## Lambiri gallery
 
-The homepage and `/[locale]/lambiriler` show all 29 approved models in numerical order. The same gallery supports Turkish, English, German, French and Arabic, with a keyboard-accessible image viewer. Model numbers and dimensions remain in the original artwork.
+The homepage has a short introduction and a four-model preview linking to `/[locale]/lambiriler`, which shows all 29 approved models in numerical order. Both pages support Turkish, English, German, French and Arabic. The gallery includes a keyboard-accessible image viewer, and model numbers and dimensions remain in the original artwork.
+
+- Homepage: `src/components/site/home-intro.tsx` and `src/lib/home.ts`
 
 - Gallery: `src/components/site/lambiri-gallery.tsx`
 - Labels and catalog URL: `src/lib/lambiri.ts`
